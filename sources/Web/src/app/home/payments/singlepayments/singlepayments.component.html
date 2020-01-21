@@ -1,0 +1,89 @@
+<!-- Personal -->
+<ng-template [ngIf]="acc_type === 'Personal'">
+        <div class="float_label row searchbar">
+           <div>
+              <input type="text" name="search" [(ngModel)]="searchText" class="form-control d-inline"
+              placeholder="name, mobile or email">
+              <label></label>
+              <i class="fa fa-search pull-right search_icn fa-lg"></i>
+              <ul class="add_itm">
+                 <li><span [routerLink]="['/home/payments/sms']" [queryParams]="{ name: 'counterParty'}">   
+                    <i class="fa fa-plus"></i>Add new counterparty</span>
+                 </li>
+              </ul>
+           </div>
+        </div>
+        <div class="cntry_par">   
+           Your countryparties  
+        </div>
+        <div *ngIf="counterParties; else find">
+           <table class="bulk_list_view table-responsive table-padding">
+              <tr class="sendUser" *ngFor="let counterParty of counterParties | filter:searchText"
+              (click)="selectUser(counterParty)" [class.active]="counterParty == selectedRow">
+              <td style="width:10%"><span class="itm_crcl" [class.crcle]="counterParty == selectedRow">{{ getShortName(counterParty.full_name) }}</span></td>
+              <td style="width:50%">
+                 <span class="lists" [class.full_name]="counterParty == selectedRow">{{ counterParty.full_name }}</span><br>
+                 <span style="font-size: 11px;">{{ counterParty.email }} - &nbsp;</span>
+                 <span style="font-size: 11px;"> +{{ counterParty.mobile }}</span>
+              </td>
+              <td style="width:30%">
+                 {{ counterParty.country_name }}
+              </td>
+              <td style="width:10%;">
+                 <span class="pay" [class.active]="counterParty == selectedRow">Pay<span class="voo">Voo</span></span>
+              </td>
+              </tr>
+           </table>
+           <div class="text-center btn_counterparty">
+              <div class="form-group">
+                 <button class="btn btn-primary continue" (click)="sendUserDetails()" [disabled]="!this.selectedRow">Continue</button>
+              </div>
+           </div>
+        </div>
+        <ng-template #find>
+           <p class="text-center dsply">Find a counterparty or add new one</p>
+        </ng-template>
+     </ng-template>
+     <!-- Business -->
+     <ng-template [ngIf]="acc_type === 'Business'">
+        <div class="float_label row searchbar">
+           <div>
+              <input type="text" name="search" [(ngModel)]="searchText" class="form-control d-inline"
+              placeholder="Search by name">
+              <i class="fa fa-search pull-right search_icn fa-lg"></i>
+              <ul class="add_itm">
+                 <li><span [routerLink]="['/home/payments_tab/sms']" [queryParams]="{ name: 'counterParty'}">
+                    <i class="fa fa-plus"></i>Add new counterparty</span>
+                 </li>
+              </ul>
+           </div>
+        </div>
+        <div class="cntry_par">
+           Your countryparties
+        </div>
+        <div *ngIf="counterParties; else find">
+           <table class="bulk_list_view table-responsive table-padding">
+              <tr class="sendUser" *ngFor="let counterParty of counterParties | filter:searchText"
+              (click)="selectUser(counterParty)" [class.active]="counterParty == selectedRow">
+              <td style="width:10%"><span class="itm_crcl" [class.crcle]="counterParty == selectedRow">{{ getShortName(counterParty.full_name) }}</span></td>
+              <td style="width:50%">
+                 <span class="lists" [class.full_name]="counterParty == selectedRow">{{ counterParty.full_name }}</span><br>
+                 <span style="font-size: 11px;">{{ counterParty.email }} - &nbsp;</span>
+                 <span style="font-size: 11px;"> +{{ counterParty.mobile }}</span>
+              </td>
+              <td style="width:30%">{{ counterParty.country_name }}</td>
+              <td style="width:10%;">
+                 <span class="pay" [class.active]="counterParty == selectedRow">Pay<span class="voo">Voo</span></span>
+              </td>
+              </tr>
+           </table>
+           <div class="text-center btn_counterparty">
+              <div class="form-group">
+                 <button class="btn btn-primary continue" (click)="sendUserDetails()" [disabled]="!this.selectedRow">Continue</button>
+              </div>
+           </div>
+        </div>
+        <ng-template #find>
+           <p class="text-center dsply">Find a counterparty or add new one</p>
+        </ng-template>
+     </ng-template>

@@ -1,0 +1,231 @@
+<ng-template [ngIf]="updateContactDetails">
+  <form [formGroup]="updateContactForm">
+    <div class="content_card">
+
+      <div class="dot_bar">
+        <ul>
+
+          <li class="current"></li>
+          <li></li>
+
+        </ul>
+      </div>
+
+      <div class="header_txt">Enter your personal info</div>
+      <div class="d_cont">
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="first_name" formControlName="first_name" placeholder="&nbsp;">
+          <label for="first_name">First name</label>
+          <div class="text text-danger"
+            *ngIf="updateContactForm.controls['first_name'].invalid && updateContactForm.controls['first_name'].dirty">
+            Please, make sure that you are using only letters, hyphen and apostrophe.</div>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="last_name" formControlName="last_name" placeholder="&nbsp;">
+          <label for="last_name">Last name</label>
+          <div class="text text-danger"
+            *ngIf="updateContactForm.controls['last_name'].invalid && updateContactForm.controls['last_name'].dirty">
+            Please, make sure that you are using only letters, hyphen and apostrophe.</div>
+        </div>
+          <div class="form-group ">
+        
+            
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input " type="radio" name="gender" value="MALE" id="radio_male"
+                formControlName="gender">
+              <label class="form-check-label" for="radio_male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input femaleradio" type="radio" name="gender" value="FEMALE" id="radio_female"
+                formControlName="gender">
+              <label class="form-check-label" for="radio_female">Female</label>
+            </div>
+            <!-- <input type="radio" value="MALE" name="gender" formControlName="gender">&nbsp;Male 
+            <input type="radio" value="FEMALE" name="gender" formControlName="gender" class="femaleradio">&nbsp;Female -->
+          </div>
+          <div class="text text-danger"
+          *ngIf="updateContactForm.controls['gender'].invalid && updateContactForm.controls['gender'].dirty">
+          Gender is required</div>
+        <div class="form-group float_label">
+          <input type="date" class="form-control  datepicker" formControlName="dob" placeholder="YYYY/MM/DD"
+            [min]="minDOB" [max]="maxDOB" (change)="dobValidation($event)">
+          <label for="last_name">Date of Birth</label>
+          <div class="text text-danger" *ngIf="validDOB">Please, enter valid date of birth</div>
+        </div>
+
+        <div class="text text-danger"
+          *ngIf="updateContactForm.controls['gender'].invalid && updateContactForm.controls['gender'].dirty">
+          Gender is required</div>
+        <div class="form-group float_label">
+            <input type="text" class="form-control" [(ngModel)]= "profileData.data.userInfo.email"
+             readonly name="email" formControlName="email" placeholder="&nbsp;">
+          <label for="Email">E-mail</label>
+          <div class="text text-danger"
+            *ngIf="updateContactForm.controls['email'].invalid && updateContactForm.controls['email'].dirty">Enter
+            valid email id</div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="float_label ">
+              <select class="custom-select" formControlName="calling_code" id="contryname" disabled (change)="SetCountryKYB()">
+                <option *ngFor="let item of countryData" [ngValue]="item.calling_code">{{item.calling_code}}
+                </option>
+              </select>
+              <label>Code</label>
+              <p class="plusSign">+</p>
+              <div class="text text-danger"
+                *ngIf="updateContactForm.controls['calling_code'].invalid && updateContactForm.controls['calling_code'].dirty">
+                Please, select calling code</div>
+            </div>
+            <span class="float_label fltlbl_lft_fx ">
+              <input type="text" class="form-control" [(ngModel)]="profileData.data.userInfo.phone" readonly  required id="mobileno" onkeypress="return AvoidSpace(event)"
+                name="mobileno" placeholder="&nbsp;" formControlName="mobile" minlength=5 maxlength=17>
+              <label for="mobileno">Mobile number</label>
+              <div class="text text-danger"
+                *ngIf="updateContactForm.controls['mobile'].invalid && updateContactForm.controls['mobile'].dirty">
+                Please enter valid mobile</div>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-6">
+            <button class="btn btn-primary btn-block" [disabled]="updateContactForm.invalid || validDOB"
+              (click)="updateAddrDetails(updateContactForm.value)">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template [ngIf]="updateContactAddress">
+  <form [formGroup]="personalAddress1">
+    <div class="content_card">
+      <div class="dot_bar">
+        <ul>
+
+          <li class="completed"></li>
+          <li class="current"></li>
+
+        </ul>
+      </div>
+
+      <div class="header_txt">Enter your personal address</div>
+      <div class="d_cont">
+        <div class="form-group float_label">
+          <select class="custom-select" formControlName="country_id" id="contryname">
+            <option *ngFor="let item of countryData" [ngValue]="item.country_id">{{item.country_name}}</option>
+          </select>
+          <label>Country</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" formControlName="postal_code" name="postal_code" placeholder="&nbsp;">
+          <label for="postal_code">Postal code</label>
+          <div class="text text-danger"
+            *ngIf="personalAddress1.controls['postal_code'].invalid && personalAddress1.controls['postal_code'].dirty">
+            please enter letters and numbers.</div>
+        </div>
+      
+        <div class="form-group float_label">
+          <input type="text" class="form-control" formControlName="address_line1" name="addressline1"
+            placeholder="&nbsp;">
+          <label for="addressline1">Address line 1</label>
+          <div class="text text-danger"
+            *ngIf="personalAddress1.controls['address_line1'].invalid && personalAddress1.controls['address_line1'].dirty">
+            Please, make sure that Address line 1 contains only letters, numbers, apostrophe, hyphen and comma.
+          </div>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" formControlName="address_line2" name="addressline2"
+            placeholder="&nbsp;">
+          <label for="addressline2">Address line 2 (Optional)</label>
+          <div class="text text-danger"
+            *ngIf="personalAddress1.controls['address_line2'].invalid && personalAddress1.controls['address_line2'].dirty">
+            Please, make sure that Address line 2 contains only letters, numbers, apostrophe, hyphen and comma.
+          </div>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" formControlName="city" name="town_city" placeholder="&nbsp;">
+          <label for="town_city">Town/City</label>
+          <div class="text text-danger"
+            *ngIf="personalAddress1.controls['city'].invalid && personalAddress1.controls['city'].dirty">Please,
+            make sure that you have used only letters, hyphen and apostrophe.</div>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" formControlName="region" name="region" placeholder="&nbsp;">
+          <label for="region">Region</label>
+          <div class="text text-danger"
+            *ngIf="personalAddress1.controls['region'].invalid && personalAddress1.controls['region'].dirty">
+            Please, make sure that Address line 2 contains only letters, numbers, apostrophe, hyphen and comma.
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-outline-primary btn-block" (click)="personalAddTemplate()">Previous</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary btn-block" [disabled]="personalAddress1.invalid" onclick="cameraIdentification()"
+                (click)="submitAddr(personalAddress1.value)">Continue</button>
+            </div>
+         </div>
+      </div>
+    </div>
+  </form>
+</ng-template>
+<div class="modal" id="kycpopup" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">KYC Verification Steps</h4>
+            <button type="button" (click)="verifyStatus()" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe *ngIf="kycIframe"  [src]="urlSafe"  allow='microphone camera' height='730px' width="100%"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal fade" id="identId" role="dialog"  data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog  modal-lg">
+   <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Identification</h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="clearFlag()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Install the PayVoo app on your smartphone or tablet.</p>
+        <h3>1. Install the PayVoo app via email link.</h3> 
+        <div *ngIf="smslinkBox">
+           <div class="form-group">
+            <label>Your Email:</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="profileData.data.userInfo.email">
+            <small>The email link for the installation of the PayVoo app will be send to this email</small>
+          </div> 
+          <span>Send installation link to your registered email by clicking </span> &nbsp;&nbsp;&nbsp;
+          <button [disabled]='isIdentId' (click)="KYClinkToMobile('android')"><img
+              src="../../assets/images/androidicon.png" style=width:35px;;></button> or
+          <button [disabled]='isIdentId' (click)="KYClinkToMobile('ios')"><img src="../../assets/images/iosicon.png"
+              style=width:35px;;></button>
+        </div>
+        <div *ngIf="!smslinkBox">
+          <p>The link with installation link was sent to {{profileData.data.userInfo.email}}</p>
+        </div> 
+        <p style="color:goldenrod">or</p>
+      <span style="color:goldenrod">Install the PayVoo app directly via the playstore.</span> &nbsp;
+       <img src="../../assets/images/googleplay.png" style=width:120px;> &nbsp;
+        <img src="../../assets/images/appstore.png" style=width:120px;>
+        <hr>
+        <h3>2. Launch app and start identification</h3>
+        <p>Open the PayVoo app on your smartphone and start the identification process with your Ident-ID.</p> 
+       <div class="form-group">
+          <label for="mobile">Your Ident-ID:</label>
+          <div class="jumbotron text-center">
+            <h3 class="text-center" style="font-weight:bold;">{{identId}}</h3>
+          </div>
+          <small>Please always provide your Ident-ID for an identification</small>
+        </div>
+      </div>  
+    </div> 
+</div>
+</div> 

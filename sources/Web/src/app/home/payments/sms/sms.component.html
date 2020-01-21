@@ -1,0 +1,32 @@
+<div class="container card page_ht_crd">
+  <form [formGroup]="sendSmsForm">
+    <fieldset class="text-center">
+      <h4 class="header_bar">Please enter code from the SMS</h4>
+      <div class="form-group">
+        <h5 class="header_para">A confirmation code was sent to <span class="txt_link">+{{ calling_code }} {{ userInfo.mobile }}</span></h5>
+        <span class="text-danger">{{ OtpError }}</span>
+        <div class="">
+            <input type="text" class="form-control nubmers" id="emailconfirm" name="opt" class="otp"
+            formControlName="sms" minlength=6 maxlength=6 autofocus="autofocus">
+        </div>
+        <div class="m_t_20 spac">You can resend the code if it doesn't arrive in <span>00:{{ timer }}</span>s</div>
+        <span class="txt_link"  [class.disabled-pointer]="isDisabled" (click)="mobileResendLink()">Resend</span>
+      </div>
+      <div class="row mrgin_btm">
+        <div class="col-md-6 mx-auto" *ngIf="name == 'counterParty'">
+            <button name="next" (click)="verifyOTPAndSubmit(sendSmsForm.controls['sms'].value)"
+             [disabled]="sendSmsForm.controls['sms'].invalid" class="next btn btn-primary btn-block m-t-50">Continue</button>
+          </div>
+            <div class="col-md-6 mx-auto" *ngIf="name == 'single'">
+              <button (click)="verifyOTPAndSubmit(sendSmsForm.controls['sms'].value)"
+               [disabled]="sendSmsForm.controls['sms'].invalid" name="next" class="next btn btn-primary btn-block m-t-50">Continue</button>
+            </div>
+            <div class="col-md-6 mx-auto" *ngIf="name == 'bulk'">
+              <button (click)="verifyOTPAndSubmit(sendSmsForm.controls['sms'].value)"
+               [disabled]="sendSmsForm.controls['sms'].invalid" name="next" class="next btn btn-primary btn-block m-t-50">Continue</button>
+            </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+

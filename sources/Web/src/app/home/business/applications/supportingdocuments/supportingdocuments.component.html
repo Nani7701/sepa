@@ -1,0 +1,281 @@
+<div class="content_card" *ngIf="supportDocument">
+  <div class="header_txt">Please provide us with supporting documentation</div>
+  <p>We need this information to open your account</p>
+  <div class="col-lg-8">
+    <div class="row">
+      <div class="doc_content_card" [class.completed]="activeclick==true">
+        <div class="doc_content_head" [class.pointer-event]="activeclick==true" data-toggle="modal"
+          data-target="#myModal" (click)="registeredAddress()">
+          <h5>Proof of registered address</h5>
+          <p>An official document containing the full business name and its registered address</p>
+        </div>
+        <p class="text text-success pull-right" *ngIf="activeclick==true" style="margin-top:2px;margin-bottom:2px;">
+          Submitted</p>
+      </div>
+      <div class="doc_content_card" [class.completed]="activeClickOperating==true">
+        <div class="doc_content_head" [class.pointer-event]="activeClickOperating==true" data-toggle="modal"
+          data-target="#myModal1" (click)="proofOfOperatingAdd()">
+          <h5>Proof of operating address</h5>
+          <p>A document dated within the past three months containing the full business name and operating address
+          </p>
+        </div>
+        <p class="text text-success pull-right" *ngIf="activeClickOperating==true"
+          style="margin-top:2px;margin-bottom:2px;">Submitted</p>
+      </div>
+      <div class="doc_content_card" [class.completed]="activeClickShareHolder==true">
+        <div class="doc_content_head" [class.pointer-event]="activeClickShareHolder==true" data-toggle="modal"
+          data-target="#myModal2" (click)="proofOfShareAdd()">
+          <h5>Proof of shareholder structure</h5>
+          <p>Latest official document confirming the names of all current directors and other people with
+            significant control</p>
+        </div>
+        <p class="text text-success pull-right" *ngIf="activeClickShareHolder==true"
+          style="margin-top:2px;margin-bottom:2px;">Submitted</p>
+      </div>
+      <div class="doc_content_card" [class.completed]="activeClickAuthority==true">
+        <div class="doc_content_head" [class.pointer-event]="activeClickAuthority==true" data-toggle="modal"
+          data-target="#myModal3" (click)="proofOfOpenAcc()">
+          <h5>Authority to open account</h5>
+          <p>A signed statement from an owner or director dated within the past three months giving you consent to
+            open an account</p>
+        </div>
+        <p class="text text-success pull-right" *ngIf="activeClickAuthority==true"
+          style="margin-top:2px;margin-bottom:2px;">Submitted</p>
+      </div>
+      <!-- <button class="btn btn-primary" *ngIf="supportDocBtn" [disabled]="!activeClickOperating">Continue</button> -->
+    </div>
+  </div>
+</div>
+<div id="myModal" class="modal content_card" tabindex="-1" role="dialog" *ngIf="suppDocumRegistered"
+  (click)="navigateScreen">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="upld_cnt">
+        <div class="header_txt">Please prove registered address</div>
+        <p>An official document containing the full business name and its registered address</p>
+        <div class="rev_note">
+          <div class="note_head"><i class="fa fa-info-circle text-danger"></i> &nbsp; Review Note</div>
+          <p>We need proof from an official, third-party source of the physical address from which your business operates.</p>
+        </div>
+        <div class="fup_cont" id="browse-click">
+          <div class="upld_button" for="fileupload">
+            <div class="lft_cont">
+              <p><span>+</span></p>
+            </div>
+            <div class="rt_cont">
+              <div class="cont_title">Add documents</div>
+              <div class="cont_desc">Scanned copy or clear photo</div>
+            </div>
+            <!-- <small class="fileuploads" *ngIf="fileupload">{{registeredFileName}}</small> -->
+          </div>
+          <div *ngIf="fileupload" class="cont_title text text-success">{{registeredFileName}}</div>
+          <input id="fileupload" [attr.disabled]="activeclick ? '' : null" class="file_inpt" type="file"
+            (change)="handleFileSelect($event)" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="det_cont">
+        <img class="photo2" *ngIf="registeredcheckimage" [src]="'data:image/jpg;base64,'+photoimage" data-toggle="modal"
+          data-target="#ZoomImage" (click)="zoomImage('data:image/jpg;base64,'+photoimage)" />
+
+        <img class="file_display" *ngIf="registeredcheckfile" src="../../../../assets/images/icons/doc.png"
+          alt="path not correct" />
+        <div class="text-center m_t_30">
+          <h4>{{legalName}}</h4>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="Country" value="{{responsedata.country_name}}"
+            placeholder="&nbsp;" readonly>
+          <label for="Country">Country</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="postal_code" value="{{responsedata.postal_code}}"
+            placeholder="&nbsp;" readonly>
+          <label for="postal_code">Postal code</label>
+        </div>
+        <div class="form-group float_label m_t_20">
+          <input type="text" class="form-control" name="addressline1" value="{{responsedata.address_line1}}"
+            placeholder="&nbsp;" readonly>
+          <label for="addressline1">Address line 1</label>
+        </div>
+        <div class="form-group float_label m_t_20">
+          <input type="text" class="form-control" name="addressline1" value="{{responsedata.address_line1}}"
+            placeholder="&nbsp;" readonly>
+          <label for="addressline2">Address line 2(Optional)</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="City" value="{{responsedata.city}}" placeholder="&nbsp;"
+            readonly>
+          <label for="city">Town / City</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="City" value="{{responsedata.city}}" placeholder="&nbsp;"
+            readonly>
+          <label for="city">Region</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <button type="button" class="btn btn-outline-primary btn-block" data-dismiss="modal"
+        aria-label="Close" (click)="formValidate2()">Cancel</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary  btn-block" (click)="uploadAddressDocument()" data-dismiss="modal"
+        [disabled]="!fileupload">Continue</button>
+    </div>
+  </div>
+</div>
+<div id="myModal1" class="modal content_card" tabindex="-1" role="dialog" *ngIf="proofofOperating">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="header_txt">Please prove operating address</div>
+      <p>A document dated within the past three months containing the full business name and operating address
+      </p>
+      <div class="rev_note">
+        <div class="note_head"><i class="fa fa-info-circle text-danger"></i> &nbsp; Review Note</div>
+        <!-- <p>
+          A document dated within the past three months containing the full business name and operating address
+        </p> -->
+        <p>We need proof from an official, third-party source of the physical address from which your business operates.</p>
+
+      </div>
+      <div class="fup_cont" id="browse-click">
+        <div class="upld_button" for="fileupload">
+          <div class="lft_cont">
+            <p><span>+</span></p>
+          </div>
+          <div class="rt_cont">
+            <div class="cont_title">Add documents</div>
+            <div class="cont_desc">Scanned copy or clear photo</div>
+          </div>
+        </div>
+        <div *ngIf="fileupload" class="cont_title text text-success">{{fileName}}</div>
+        <input id="fileupload" [attr.disabled]="activeClickOperating ? '' : null" class="file_inpt" type="file"
+          (change)="handleFileSelects($event)" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="det_cont">
+        <img class="photo2" *ngIf="registeredcheckimage" [src]="'data:image/jpg;base64,'+opertingPhotoImage"
+          data-toggle="modal" data-target="#ZoomImage"
+          (click)="zoomImage('data:image/jpg;base64,'+opertingPhotoImage)" />
+        <img class="file_display" *ngIf="operatingcheckfile" src="../../../../assets/images/icons/doc.png"
+          alt="path not correct" />
+
+        <div class="text-center m_t_20">
+          <h4>{{legalName}}</h4>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="Country" value="{{responseDataOperting.country_name}}"
+            placeholder="&nbsp;" readonly>
+          <label for="Country">Country</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="postal_code" value="{{responseDataOperting.postal_code}}"
+            placeholder="&nbsp;" readonly>
+          <label for="postal_code">Postal code</label>
+        </div>
+        <div class="form-group float_label m_t_20">
+          <input type="text" class="form-control" name="addressline1" value="{{responseDataOperting.address_line1}}"
+            placeholder="&nbsp;" readonly>
+          <label for="addressline1">Address Line 1</label>
+        </div>
+        <div class="form-group float_label m_t_20">
+          <input type="text" class="form-control" name="addressline2" value="{{responseDataOperting.address_line2}}"
+            placeholder="&nbsp;" readonly>
+          <label for="addressline2">Address Line 2(Optional)</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="City" value="{{responseDataOperting.city}}" placeholder="&nbsp;"
+            readonly>
+          <label for="city">Town / City</label>
+        </div>
+        <div class="form-group float_label">
+          <input type="text" class="form-control" name="City" value="{{responseDataOperting.city}}" placeholder="&nbsp;"
+            readonly>
+          <label for="city">Region</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <button type="button" class="btn btn-outline-primary btn-block" data-dismiss="modal"
+        aria-label="Close" (click)="formValidate3()">Cancel</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary  btn-block" (click)="uploadOperatingDocument()"
+        [disabled]="!fileupload" data-dismiss="modal">Continue</button>
+    </div>
+  </div>
+</div>
+<div id="myModal2" class="modal content_card share" tabindex="-1" role="dialog" *ngIf="proofOfShareHolder">
+  <div class="header_txt"> Proof of shareholder structure</div>
+  <p>Latest official document confirming the names of all current directors and other people with
+    significant control</p>
+  <div class="fup_cont" id="browse-click">
+    <div class="upld_button" for="fileupload">
+      <div class="lft_cont">
+        <p><span>+</span></p>
+      </div>
+      <div class="rt_cont">
+        <div class="cont_title">Add documents</div>
+        <div class="cont_desc">Scanned copy or clear photo</div>
+      </div>
+    </div>
+    <div *ngIf="fileupload" class="cont_title text text-success">{{shareholderFileName}}</div>
+    <input id="fileupload" [attr.disabled]="activeClickShareHolder ? '' : null" class="file_inpt" type="file"
+      (change)="handleFileSelectshare($event)" />
+  </div>
+  <img class="photo2" *ngIf="registeredcheckimage" [src]="'data:image/jpg;base64,'+shareholder" data-toggle="modal"
+    data-target="#ZoomImage" (click)="zoomImage('data:image/jpg;base64,'+shareholder)" />
+
+  <img class="file_display" *ngIf="sharefoldercheckfile" src="../../../../assets/images/icons/doc.png"
+    alt="path not correct" />
+  <div class="row btm">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-outline-primary btn-block" data-dismiss="modal"
+        aria-label="Close" (click)="formValidate()">Cancel</button>
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary  btn-block" (click)="uploadShareDocument()" data-dismiss="modal"
+        [disabled]="!fileupload">Continue</button>
+    </div>
+  </div>
+</div>
+<div id="myModal3" class="modal content_card openacc" tabindex="-1" role="dialog" *ngIf="authorityAddress">
+  <div class="header_txt">Authority to open account</div>
+  <p>A signed statement from an owner or director dated within the past three months giving you consent to
+    open an account</p>
+  <div class="fup_cont" id="browse-click">
+    <div class="upld_button" for="fileupload">
+      <div class="lft_cont">
+        <p><span>+</span></p>
+      </div>
+      <div class="rt_cont">
+        <div class="cont_title">Add documents</div>
+        <div class="cont_desc">Scanned copy or clear photo</div>
+      </div>
+    </div>
+    <input id="fileupload" [attr.disabled]="activeClickAuthority ? '' : null" class="file_inpt" type="file"
+      (change)="handleFileAuthority($event)" />
+  </div>
+  <div *ngIf="fileupload" class="cont_title text text-success">{{authorityFileName}}</div>
+  <img class="photo2" *ngIf="registeredcheckimage" [src]="'data:image/jpg;base64,'+authorityPhotoImage"
+    data-toggle="modal" data-target="#ZoomImage" (click)="zoomImage('data:image/jpg;base64,'+authorityPhotoImage)" />
+  <img class="file_display" *ngIf="authoritycheckfile" src="../../../../assets/images/icons/doc.png"
+    alt="path not correct" />
+  <div class="row btm">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-outline-primary btn-block" data-dismiss="modal"
+        aria-label="Close" (click)="formValidate1()">Cancel</button>
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary  btn-block" (click)="uploadAuthorityDocument()" data-dismiss="modal"
+        [disabled]="!fileupload" >Continue</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<!-- <div *ngIf="indexService.isSmsVerified"> -->
+    <div class="card page_ht_crd">
+        <h4 class="text-center">Add New Counterparty</h4>
+        <div class="container m-t-10">
+            <form [formGroup]="SearchForm">
+                <div class="form-group float_label">
+                    <input type="text" class="form-control" formControlName="search_name" placeholder="&nbsp;"
+                    (keyup)="searchTerm.next($event.target.value)">
+                    <label>Name</label>
+                    <i class="fa fa-search pull-right" style="margin-top:-25px;"></i>
+                    <p class="wrong_info">Wrong information may cause transfers to be rejected</p>
+                </div>
+                <div *ngIf="SearchForm.controls['search_name'].value !== ''">
+                    <div *ngIf="searchResults; else searchNull">
+                        <table class="bulk_list_view table-responsive">
+                            <tr *ngFor="let payUser of searchResults"
+                                (click)="setClickedRow(payUser)" [class.active]="payUser == selectedRow">
+                                <td style="width: 100%; cursor: pointer;">
+                                    <span class="itm_crcl" [class.crcle]="payUser == selectedRow">{{ getShortName(payUser.full_name) }}</span>
+                                    <span>{{ payUser.full_name }}</span><br>
+                                    <span class="mobile_email">{{ payUser.email }} -&nbsp;</span>
+                                    <span style="font-size: 11px;"> +{{ payUser.mobile }}</span>&nbsp;
+                                </td>
+                                <td><span class="pay" [class.active]="payUser == selectedRow">Pay<span class="voo">Voo</span></span></td>
+                            </tr>
+                            <div>
+                                <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                                    <li [ngClass]="{disabled:pager.currentPage === 1}">
+                                        <a (click)="setPage(1)">First</a>
+                                    </li>
+                                    <li [ngClass]="{disabled:pager.currentPage === 1}">
+                                        <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                                    </li>
+                                    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                                        <a (click)="setPage(page)">{{page}}</a>
+                                    </li>
+                                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                                        <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                                    </li>
+                                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                                        <a (click)="setPage(pager.totalPages)">Last</a>
+                                    </li>
+                                </ul> -->
+                                <!-- <pagination-controls (pageChange)="getPage($event)"></pagination-controls> -->
+                            </div>
+                        </table>
+                    </div>
+                </div>
+                <ng-template #searchNull>   <!--- it's shows if there is no search results --->
+                    <div class="text-center">
+                        <div><img src="../../../../assets/images/icons/user.png"></div>
+                        <h5 class="p1">Nothing found?</h5>
+                        <p class="p2">Try another search or invite<br>
+                        <span style="color: #2a3477;">{{ SearchForm.controls['search_name'].value }}</span> to PayVoo</p>
+                    </div>
+                    <div class="text-center btn_counterparty">
+                        <div class="form-group">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Invite to PayVoo</button>
+                        </div>
+                    </div>
+                </ng-template>  <!--- ending if there is no search results --->
+
+                <div class="text-center btn_counterparty" *ngIf="SearchForm.controls['search_name'].value === '' || searchResults">
+                    <div class="form-group">
+                        <button class="btn btn-primary" (click)="createCounterParty(Salert)"
+                        [disabled]="SearchForm.controls['search_name'].value === '' || !isEmpty(this.selectedRow)">Create counterparty</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <ng-template #Salert>   <!-- alert after counterParty scuccess -->
+        <div class="modal-body modal_size text-center">
+            <div class="check_div">
+                <img src="../../../../assets/images/tick_icon.png">
+            </div>
+            <h4 class="header_bar">Counterparty Created</h4>
+            <div class="header_para">Counterparty Created Sucessfully</div>
+            <div style="text-align: center;">
+                <button class="btn btn-primary btn-block col-4 offset-4" (click)="backToPayments()">Continue</button>
+            </div>
+        </div>
+    </ng-template>  <!-- alert ending -->
+
+    <div class="container">     <!-- Invite Payvoo Screen -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog" style="width: 20%">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title">Message to send</p>
+                        <button type="button" class="close" data-dismiss="modal" (click)="inviteClose()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal_text"><span >Join PayVoo to get the fastest payments and</span> <br>
+                        <span style="margin-left: 20px;">the best fix rates. Use this link to join</span></p>
+                        <a class="invite_link" href="https://www.payvoo.com">https://www.payvoo.com</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button (click)="copyText('https://www.payvoo.com')" value="click to copy" type="button" class="btn btn-primary">Copy link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                <!-- End of Invite Payvoo Screen -->
+<!-- </div> -->
+
+<!-- <div *ngIf="!indexService.isSmsVerified">
+    <p>Go to Home</p>
+</div> -->

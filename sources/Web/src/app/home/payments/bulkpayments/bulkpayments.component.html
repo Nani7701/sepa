@@ -1,0 +1,54 @@
+<ng-template [ngIf]="true">
+  <div class="float_label row searchbar">
+    <div>
+        <input type="text" name="search" [(ngModel)]="searchText" class="form-control d-inline"
+        placeholder="Search by name">
+        <i class="fa fa-search pull-right search_icn fa-lg"></i>
+      <ul class="add_itm">
+        <li [routerLink]="['/home/payments_tab/sms']" [queryParams]="{ name: 'counterParty'}" (click)="createMobileOTP()"><i class="fa fa-plus"></i>Add
+          new counterparty</li>
+      </ul>
+    </div>
+  </div> 
+  <div *ngIf="counterParties; else noCountries">
+  <div class="cntry_par">
+      Your countryparties
+    </div>
+  <table class="bulk_list_view table-responsive table-padding">
+
+    <tr *ngFor="let counterParty of counterParties | filter:searchText; let i = index"
+      (click)="sendUserListDetails(counterParty,i)"  [ngClass]="{'active': counterParty.selectORunselect}" >       
+            <td style="width:10%"><span class="itm_crcl">{{getShortName(counterParty.full_name)}}</span></td>
+            <td style="width:50%">
+                <span class="lists">{{counterParty.full_name}}</span>
+                <p class="para1">{{counterParty.currency}} - {{counterParty.account_no}}</p>
+            </td>
+            <td style="width:30%">
+                {{counterParty.country_name}}
+            </td>
+            <td style="width:10%;">
+                <span class="pay">Pay<span class="voo">Voo</span> </span>
+            </td>           
+    </tr>
+  </table> 
+  <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <button class="btn btn-primary btn-block" [disabled]="checkedList <= 0" 
+          (click)="next()">Continue</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noCountries>
+  <div class="text-center dsply">
+    <p>Find a countryparty or add a new one.</p>
+  </div>
+  <div class="text-center text">
+    <div class="listsicon">
+      <img src="../../../../assets/images/listicon.png">
+    </div>
+    <p class="para">Use the bulk payment file option</p>
+    <p>Create multiple payments by using the .CSV template</p>
+    <a>Use template</a>
+  </div>
+</ng-template>
+</ng-template>

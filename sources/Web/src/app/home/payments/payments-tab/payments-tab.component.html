@@ -1,0 +1,20 @@
+<div class="card page_ht_crd" *ngIf="true">
+    <div class="acc_navbar">
+      <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item">
+          <a  data-target="#single" data-toggle="tab" class="nav-link active">Single payment</a>
+        </li>
+        <li *ngIf="accountType == 'Business'"  class="nav-item">
+          <a data-target="#bulk" data-toggle="tab" class="nav-link">Bulk payment</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="single">
+        <app-singlepayments></app-singlepayments>
+      </div>
+      <div class="tab-pane fade " id="bulk">
+        <app-bulkpayments></app-bulkpayments>
+      </div>
+    </div>
+</div>

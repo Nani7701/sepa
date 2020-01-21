@@ -1,0 +1,571 @@
+<ng-template [ngIf]="confmDirector">
+  <div class="content_card">
+    <div class="dot_bar">
+      <ul>
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+
+      </ul>
+    </div>
+    <div class="header_txt">Confirm directors</div>
+
+    <div class="d_cont">
+      <ul class="add_itm">
+        <li data-toggle="modal" data-target="#addDirectorFieldVal"><i class="fa fa-plus"></i>Add director</li>
+
+        <li *ngFor="let item of directorList"><span class="itm_crcl" data-toggle="modal" data-target="#myModal"
+            (click)="getCurrntDir(item)">{{item.name | slice:0:1| titlecase}}</span>
+          <span class="lists">{{item.name.replace(','," ")}}</span>
+          <span class="pull-right del_btn" (click)="deleteOwner(item.kyb_bo_id,item.type)">
+            <i class="fa fa-trash"></i>
+          </span>
+        </li>
+
+      </ul>
+      <div class="row">
+        <div class="col-md-6 offset-md-6">
+          <button class="btn btn-primary btn-block " (click)="moveToShareHolder()"
+            [disabled]="directorList?.length==0">Continue</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</ng-template>
+<ng-template [ngIf]="shareholderTemp">
+  <div class="content_card">
+    <div class="dot_bar">
+      <ul>
+        <li class="completed"></li>
+        <li class="current"></li>
+        <li></li>
+
+      </ul>
+    </div>
+    <div class="header_txt">Confirm shareholders
+    </div>
+
+    <div class="d_cont">
+      <p class="ver_para">Add the names of individuals who <b>own or control more than 25%</b> of the company. If no one
+        person does,
+        then add the largest shareholder.</p>
+      <ul class="add_itm">
+        <li data-toggle="modal" (click)=addShrHoldrFieldValue() data-target="#addShrHoldrFieldValue"><i
+            class="fa fa-plus"></i>Add shareholder </li>
+
+        <li *ngFor="let item of ownerShareholderList?.Shareholder">
+          <span class="itm_crcl">{{item.name | slice:0:1| titlecase}}</span>
+          <span class="lists" data-toggle="modal" data-target="#myModal"
+            (click)="getCurrntDir(item)">{{item.name.replace(','," ")}}
+            <span class=" pull-right del_btn" (click)="deleteOwner(item.kyb_bo_id,item.type)">
+              <i class="fa fa-trash"></i>
+            </span>
+
+            <p class="para">{{item.percentage}}% of the shares</p>
+          </span>
+
+
+        </li>
+        <li *ngFor="let item of ownerShareholderList?.Businessowner"><span
+            class="itm_crcl">{{item.name | slice:0:1| titlecase}}</span>
+          <span class="lists" data-toggle="modal" data-target="#myModal"
+            (click)="getCurrntDir(item)">{{item.name.replace(','," ")}}&nbsp;(Business Owner) <span
+              class=" pull-right del_btn" (click)="deleteOwner(item.kyb_bo_id,item.type)">
+              <i class="fa fa-trash"></i>
+            </span>
+
+            <p class="para">{{item.percentage}}% of the shares</p>
+          </span>
+
+
+        </li>
+
+      </ul>
+      <div class="modal" id="addShrHoldrFieldValue">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <div class="header_txt text-center" style="margin-left: 20px;">New
+                shareholder
+              </div>
+              <!-- <div class="header_txt text-center" *ngIf="type =='shareholder'" style="margin-left: 20px;">New
+                  shareholder
+                </div> -->
+              <!-- <div class="header_txt text-center" *ngIf="type !='shareholder'" style="margin-left: 20px;">Ultimate
+                beneficial owner's details</div> -->
+              <div class="col-lg-12">
+                <form [formGroup]="ultimateOwnForm">
+
+                  <!-- <div class="form-group float_label">
+                    <select class="form-control" formControlName="type" [(ngModel)]="type">
+                      <option value="businessowner">Owner</option>
+                      <option value="shareholder">Shareholder</option>
+                    </select>
+                    <input type="text" class="form-control" readonly name="type" formControlName="type"
+                    placeholder="&nbsp;" [(ngModel)]="type">
+
+                    <div class="text text-danger"
+                      *ngIf="ultimateOwnForm.controls['type'].invalid && ultimateOwnForm.controls['type'].dirty">Share
+                      holder is required</div>
+                  </div> -->
+
+                  <div class="form-group float_label">
+                    <input type="text" class="form-control" name="fname" formControlName="first_name"
+                      placeholder="&nbsp;">
+                    <label for="fname">First name</label>
+                    <div class="text text-danger"
+                      *ngIf="ultimateOwnForm.controls['first_name'].invalid && ultimateOwnForm.controls['first_name'].dirty">
+                      Please, make sure that you are using only letters, hyphen and apostrophe.</div>
+                  </div>
+                  <div class="form-group float_label">
+                    <input type="text" class="form-control" name="lname" formControlName="last_name"
+                      placeholder="&nbsp;">
+                    <label for="lname">Last name</label>
+                    <div class="text text-danger"
+                      *ngIf="ultimateOwnForm.controls['last_name'].invalid && ultimateOwnForm.controls['last_name'].dirty">
+                      Please, make sure that you are using only letters, hyphen and apostrophe..</div>
+                  </div>
+                  <div class="form-group float_label">
+                    <input type="text" class="form-control" name="email" formControlName="email" placeholder="&nbsp;">
+                    <label for="email">E-mail</label>
+                    <div class="text text-danger"
+                      *ngIf="ultimateOwnForm.controls['email'].invalid && ultimateOwnForm.controls['email'].dirty && ultimateOwnForm.controls['email'].touched">
+                      Please, enter valid email</div>
+                  </div>
+                  <div class="form-group float_label">
+                    <input type="text" class="form-control" name="per" min="25" max="100" formControlName="percentage" 
+                      (keypress)="numberOnly($event)" placeholder="&nbsp;">
+                    <label for="email">Percentage of ownership</label>
+                    <div class="text text-danger"
+                      *ngIf="ultimateOwnForm.controls['percentage'].invalid && ultimateOwnForm.controls['percentage'].dirty && ultimateOwnForm.controls['percentage'].touched">
+                      Please, make sure to enter in between 25 to 100 only.</div>
+                    <p class="small m-t-5">If you don't know precise number then add an approximate value</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button class="btn btn-block btn-outline-primary" data-dismiss="modal"
+                        (click)="resetDirShreholrd()">Cancel</button>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-block btn-primary" [disabled]="ultimateOwnForm.invalid"
+                        (click)="submitSharedHolder(ultimateOwnForm.value)" data-dismiss="modal">Continue</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-outline-primary btn-block" (click)="directorTemplate()">Previous</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-primary btn-block" (click)="verifyIdentity()"
+            [disabled]="ownerShareholderList?.shareholder?.length==0 && ownerShareholderList?.businessowner?.length==0">Continue</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</ng-template>
+<ng-template [ngIf]="verifyIdenTemp">
+  <div class="content_card">
+    <div class="dot_bar">
+      <ul>
+        <li class="completed"></li>
+        <li class="completed"></li>
+        <li class="current"></li>
+
+      </ul>
+    </div>
+    <div class="header_txt">Verify identities</div>
+    <p>We need a little more information about the following people</p>
+    <div class="d_cont">
+      <ul class="add_itm">
+        Director
+        <li *ngFor="let x of arrayList?.Directors">
+          <div class="dir_crcl">
+            <span class="itm_crcl">{{x.name | slice:0:1| titlecase}}</span>
+            <div class="dir_det">
+              {{x.name.replace(','," ")}}
+              <div *ngIf="(x.is_verified==true)"><a [href]="" class="text-success">Verified</a></div>
+              <div *ngIf="(x.is_verified==false)" (click)="x.isEditable=!x.isEditable"><a [href]=""
+                  class="text-danger">Please verify</a>
+                <div class="header_txt" *ngIf="x.isEditable">
+                  <button class="btn btn-primary  btn-sm" (click)="sendInvitationLink(x)">Send invitation</button>
+                  &nbsp;
+                  <button class="btn btn-outline-primary  btn-sm" (click)="VeriyYourself(x)">Enter information
+                    yourself</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="margin-top: 11px;border-bottom: none !important;">Shareholder</li>
+        <li *ngFor="let x of arrayList?.Shareholder">
+          <div class="dir_crcl">
+            <span class="itm_crcl">{{x.name | slice:0:1| titlecase}}</span>
+            <div class="dir_det">
+              {{x.name.replace(','," ")}}
+              <div
+                *ngIf="(x.is_verified==true && x.kyc_status=='SUCCESS') || (x.is_verified==true && x.kyc_status=='PENDING') && (x.isKyc==false)">
+                <a [href]="" class="text-success">Verified</a></div>
+              <div
+                *ngIf="(x.is_verified==false && x.kyc_status=='') || (x.is_verified==true && x.kyc_status=='PENDING') && (x.isKyc==true)">
+                <a [href]="" class="text-danger" (click)="x.isEditable=!x.isEditable">Please verify
+                  <!-- <span *ngIf="x.kyc_status!=''">({{ x.kyc_status}})</span> -->
+                </a>
+                <div class="header_txt" *ngIf="x.isEditable">
+                  <button class="btn btn-primary btn-sm" (click)="sendInvitationLink()">Send invitation</button> &nbsp;
+                  <button class="btn btn-outline-primary btn-sm" (click)="VeriyYourself(x)">Enter information
+                    yourself</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li style="margin-top: 11px;border-bottom: none !important;"> Business Owner</li>
+        <li *ngFor="let x of arrayList?.businessowner">
+          <div class="dir_crcl">
+            <span class="itm_crcl">{{x.name | slice:0:1| titlecase}}</span>
+            <div class="dir_det">
+              {{x.name.replace(','," ")}} &nbsp;(Business Owner)
+              <div
+                *ngIf="(x.is_verified==true && x.kyc_status=='SUCCESS') || (x.is_verified==true && x.kyc_status=='PENDING') && (x.isKyc==false)">
+                <a [href]="" class="text-success">Verified</a></div>
+              <div
+                *ngIf="(x.is_verified==false && x.kyc_status=='') || (x.is_verified==true && x.kyc_status=='PENDING') && (x.isKyc==true)">
+                <a [href]="" class="text-danger" (click)="x.isEditable=!x.isEditable">Please verify
+                 
+                </a>
+                <div class="header_txt" *ngIf="x.isEditable">
+                  <button class="btn btn-primary  btn-sm" (click)="sendInvitationLink()">Send invitation</button> &nbsp;
+                  <button class="btn btn-outline-primary  btn-sm" (click)="VeriyYourself(x)">Enter information
+                    yourself</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-outline-primary btn-block" (click)="shareholderList()">Previous</button>
+        </div>
+        <div class="col-md-6">
+          <button type="button" class="btn btn-primary" style="margin-bottom: 10px;" *ngIf="verifyAllbtn"
+            style="margin-left: 48px;" (click)="verifiedAllStatus()">Continue</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template [ngIf]="busOwnPerTemplate">
+  <div class="content_card">
+    <div class="dot_bar">
+      <ul>
+        <li class="completed"></li>
+        <li class="completed"></li>
+        <li class="completed"></li>
+        <li class="current"></li>
+        <li></li>
+      </ul>
+    </div>
+    <form [formGroup]="busOwnerForm">
+      <div>
+        <div class="header_txt m-b-20">{{busOwnerForm.value.first_name}} {{busOwnerForm.value.last_name}} enter your
+          details</div>
+        <div class="col-lg-8">
+          <div class="form-group float_label">
+            <input type="text" class="form-control" name="dir_share" readonly [(ngModel)]="dirList"
+              formControlName="business_owner_type" placeholder="&nbsp;">
+
+            <!-- <select id="type" formControlName="business_owner_type" class="form-control">
+              <option *ngFor="let c of dirList" [ngValue]="c">{{ c | titlecase }}</option>
+            </select> -->
+
+            <div class="text text-danger"
+              *ngIf="busOwnerForm.controls['business_owner_type'].invalid && busOwnerForm.controls['business_owner_type'].dirty">
+            </div>
+          </div>
+          <div class="form-group float_label">
+            <input type="text" class="form-control" name="first_name" formControlName="first_name" placeholder="&nbsp;">
+            <label for="first_name">First name</label>
+            <div class="text text-danger"
+              *ngIf="busOwnerForm.controls['first_name'].invalid && busOwnerForm.controls['first_name'].dirty">
+              Please, make sure that you are using only letters, hyphen and apostrophe.</div>
+          </div>
+          <div class="form-group float_label">
+            <input type="text" class="form-control" name="last_name" formControlName="last_name" placeholder="&nbsp;">
+            <label for="last_name">Last name</label>
+            <div class="text text-danger"
+              *ngIf="busOwnerForm.controls['last_name'].invalid && busOwnerForm.controls['last_name'].dirty">Please,
+              make sure that you are using only letters, hyphen and apostrophe.</div>
+          </div>
+          <div class="form-group float_label">
+            <input type="date" class="form-control datepicker" formControlName="dob" placeholder="&nbsp;" [min]="minDOB"
+              [max]="maxDOB" (change)="dobValidation($event)">
+            <label for="date">Date of birth</label>
+            <div class="text text-danger" *ngIf="validDOB">Please, enter valid date of birth</div>
+          </div>
+          <!-- <div class="form-group float_label">
+           
+            <input type="radio" value="Male" formControlName="gender">Male
+            <input type="radio" class="form-check-input femaleradio" value="Female" formControlName="gender">Female <br>
+            <div class="text text-danger"
+              *ngIf="busOwnerForm.controls['gender'].invalid && busOwnerForm.controls['gender'].dirty">Please,
+              select gender</div>
+          </div> -->
+
+          <div class="form-group ">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" value="Male" formControlName="gender">
+              <label class="form-check-label" for="radio_male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input femaleradio" value="Female" formControlName="gender">
+              <label class="form-check-label" for="radio_female">Female</label>
+            </div>
+            <!-- <input type="radio" value="MALE" name="gender" formControlName="gender">&nbsp;Male 
+              <input type="radio" value="FEMALE" name="gender" formControlName="gender" class="femaleradio">&nbsp;Female -->
+          </div>
+
+
+          <div class="form-group float_label">
+            <input type="text" class="form-control" name="email" formControlName="email" placeholder="&nbsp;">
+            <label for="Email">Email</label>
+            <div class="text text-danger"
+              *ngIf="busOwnerForm.controls['email'].invalid && busOwnerForm.controls['email'].dirty">Please, enter
+              valid email</div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="float_label">
+                <select class="custom-select" formControlName="calling_code" (change)="SetCountry()">
+                  <option *ngFor="let item of countryData" [ngValue]="item.calling_code">{{item.calling_code}}
+                  </option>
+                </select>
+                <label>Code</label>
+                <div class="text text-danger"
+                  *ngIf="busOwnerForm.controls['calling_code'].invalid && busOwnerForm.controls['calling_code'].dirty">
+                  Please, select calling code</div>
+              </div>
+              <span class="float_label fltlbl_lft_fx">
+                <input type="text" class="form-control" required id="mobileno" onkeypress="return AvoidSpace(event)"
+                  name="mobileno" placeholder="&nbsp;" formControlName="mobile" minlength=5 maxlength=17>
+                <label for="mobileno">Mobile Number</label>
+                <div class="text text-danger"
+                  *ngIf="busOwnerForm.controls['mobile'].invalid && busOwnerForm.controls['mobile'].dirty">Please,
+                  enter valid mobile</div>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-outline-primary btn-block" (click)="listTempalte()">Previous</button>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-primary btn-block" [disabled]="busOwnerForm.invalid || validDOB"
+                (click)="submitPersonalDetails(busOwnerForm.value)">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>
+<ng-template [ngIf]="busSelfAddress">
+  <div class="content_card">
+    <div class="dot_bar">
+      <ul>
+        <li class="completed"></li>
+        <li class="completed"></li>
+        <li class="completed"></li>
+        <li class="completed"></li>
+        <li class="current"></li>
+      </ul>
+    </div>
+    <form [formGroup]="personalAddress">
+      <div>
+        <div class="header_txt m-b-20">{{busOwnerForm.value.first_name}} {{busOwnerForm.value.last_name}} enter personal
+          address</div>
+        <div class="col-lg-8">
+          <div class="form-group float_label">
+            <select class="custom-select" formControlName="country_id" id="contryname">
+              <option *ngFor="let item of countryData" [ngValue]="item.country_id">{{item.country_name}}</option>
+            </select>
+            <label>Select country</label>
+          </div>
+          <div class="form-group float_label">
+            <input type="text" class="form-control" formControlName="postal_code" name="postal_code"
+              placeholder="&nbsp;">
+            <label for="postal_code">Postal code</label>
+            <div class="text text-danger"
+              *ngIf="personalAddress.controls['postal_code'].invalid && personalAddress.controls['postal_code'].dirty">
+              please enter letters and numbers.</div>
+          </div>
+
+          <div class="form-group float_label">
+            <input type="text" class="form-control" formControlName="address_line1" name="addressline1"
+              placeholder="&nbsp;">
+            <label for="addressline1">Address line 1</label>
+            <div class="text text-danger"
+              *ngIf="personalAddress.controls['address_line1'].invalid && personalAddress.controls['address_line1'].dirty">
+              Please, make sure that Address line 1 contains only letters, numbers, apostrophe, hyphen and comma.
+            </div>
+          </div>
+          <div class="form-group float_label">
+            <input type="text" class="form-control" formControlName="address_line2" name="addressline2"
+              placeholder="&nbsp;">
+            <label for="addressline2">Address line 2 (Optional)</label>
+            <div class="text text-danger"
+              *ngIf="personalAddress.controls['address_line2'].invalid && personalAddress.controls['address_line2'].dirty">
+              Please, make sure that Address line 2 contains only letters, numbers, apostrophe, hyphen and comma.
+            </div>
+          </div>
+          <div class="form-group float_label">
+            <input type="text" class="form-control" formControlName="city" name="town_city" placeholder="&nbsp;">
+            <label for="town_city">Town / City</label>
+            <div class="text text-danger"
+              *ngIf="personalAddress.controls['city'].invalid && personalAddress.controls['city'].dirty">Please,
+              make sure that you have used only letters, hyphen and apostrophe.</div>
+          </div>
+          <div class="form-group float_label">
+            <input type="text" class="form-control" formControlName="region" name="region" placeholder="&nbsp;">
+            <label for="region">Region</label>
+            <div class="text text-danger"
+              *ngIf="personalAddress.controls['region'].invalid && personalAddress.controls['region'].dirty">Please
+              enter region</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-outline-primary btn-block" (click)="personaDetailsTemplate()">Previous</button>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-primary btn-block" [disabled]="personalAddress.invalid"
+                onclick="cameraIdentification()" (click)="submitPersonalAddr(personalAddress.value)">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<div class="modal" id="kycpopup" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">KYC Verification Steps</h4>
+        <button type="button" (click)="verifyStatus()" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe *ngIf="kycIframe" [src]="urlSafe" allow='microphone camera' height='730px' width="100%"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="identId" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Identification</h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="clearFlag()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Install the PayVoo app on your smartphone or tablet.</p>
+        <h3>1. Install the PayVoo app via email link.</h3>
+        <div *ngIf="smslinkBox">
+          <div class="form-group">
+            <label>Your Email:</label>
+            <!-- <input type="text" class="form-control" readonly [(ngModel)]="profileData.data.userInfo.email"> -->
+            <input type="text" class="form-control" readonly [(ngModel)]="shareHolderEmail">
+            <small>The email link for the installation of the PayVoo app will be send to this email</small>
+          </div>
+          <span>Send installation link to your registered email by clicking </span> &nbsp;&nbsp;&nbsp;
+          <button [disabled]='isIdentId' (click)="KYClinkToMobile('android')"><img
+              src="../../assets/images/androidicon.png" style=width:35px;;></button> or
+          <button [disabled]='isIdentId' (click)="KYClinkToMobile('ios')"><img src="../../assets/images/iosicon.png"
+              style=width:35px;;></button>
+        </div>
+        <div *ngIf="!smslinkBox">
+          <p>The link with installation link was sent to {{shareHolderEmail}}</p>
+        </div>
+        <p style="color:goldenrod">or</p>
+        <span style="color:goldenrod">Install the PayVoo app directly via the playstore.</span> &nbsp;
+        <img src="../../assets/images/googleplay.png" style=width:120px;> &nbsp;
+        <img src="../../assets/images/appstore.png" style=width:120px;>
+        <hr>
+        <h3>2. Launch app and start identification</h3>
+        <p>Open the PayVoo app on your smartphone and start the identification process with your Ident-ID.</p>
+        <div class="form-group">
+          <label for="mobile">Your Ident-ID:</label>
+          <div class="jumbotron text-center">
+            <h3 class="text-center" style="font-weight:bold;">{{identId}}</h3>
+          </div>
+          <small>Please always provide your Ident-ID for an identification</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="addDirectorFieldVal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="col-lg-12"> <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title header_txt text-center">New director</h4>
+
+          <form [formGroup]="addDirectorForm">
+            <div class="form-group float_label">
+              <input type="text" class="form-control" name="fname" formControlName="first_name" placeholder="&nbsp;">
+              <label for="fname">First name</label>
+              <div class="text text-danger"
+                *ngIf="addDirectorForm.controls['first_name'].invalid && addDirectorForm.controls['first_name'].dirty">
+                Please, make sure that you are using only letters, hyphen and apostrophe.</div>
+            </div>
+            <div class="form-group float_label">
+              <input type="text" class="form-control" name="lname" formControlName="last_name" placeholder="&nbsp;">
+              <label for="lname">Last name</label>
+              <div class="text text-danger"
+                *ngIf="addDirectorForm.controls['last_name'].invalid && addDirectorForm.controls['last_name'].dirty">
+                Please, make sure that you are using only letters, hyphen and apostrophe.</div>
+
+            </div>
+            <div class="form-group float_label">
+              <input type="text" class="form-control" name="email" formControlName="email" placeholder="&nbsp;">
+              <label for="email">E-mail</label>
+              <div class="text text-danger"
+                *ngIf="addDirectorForm.controls['email'].invalid && addDirectorForm.controls['email'].dirty && addDirectorForm.controls['email'].touched">
+                Please enter valid email</div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-block btn-outline-primary" style="margin-bottom: 10px;"
+                  data-dismiss="modal" (click)="resetDirShreholrd()">Cancel</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn btn-block btn-primary" style="margin-bottom: 10px;"
+                  [disabled]="addDirectorForm.invalid" (click)="submitDirecotrsNames(addDirectorForm.value)"
+                  data-dismiss="modal">Continue</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

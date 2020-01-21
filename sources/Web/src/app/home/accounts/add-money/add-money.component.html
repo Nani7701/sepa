@@ -1,0 +1,100 @@
+<div class="container-fluid">
+ <div class="page_header">
+    <div class="header">
+      Add Money
+    </div>
+    <ul>
+      <li >Accounts</li>
+      <li>Add money</li>
+    </ul>
+  </div>
+  <div class="pull-right d-inline m-t-10" >
+    <a *ngIf="authService.accountMatch(['Personal']); else Business" routerLink="/home/account-index/getaccount"><i class="fa fa-arrow-left"></i> Back</a>
+    <ng-template #Business>
+      <a routerLink="/home/business-account-index/getaccount"><i class="fa fa-arrow-left"></i> Back</a>
+    </ng-template>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card add_money_card" *ngIf="authService.accountMatch(['Personal'])">
+        <h3 class="card_header">How would you like to add money?</h3>
+        <div class="addcard" routerLink="/home/add-money/cards">
+          <div class="addcard_icn"><i class="fa fa-plus"></i></div>
+          <span>Add debit or credit card</span>
+        </div>
+        <div class="transfer_Bank">
+          <div class="addcard_icn"><i class="fa fa-bank"></i></div>
+          <span>Transfer to your PayVoo account</span>
+        </div>
+        <ng-container *ngFor="let item of cardData">
+        <div class="crd_card" *ngIf="(item.status == 1)" routerLink="/home/add-money/payments/{{item.payment_cards_id}}" routerLinkActive='active'> 
+          <div class="info_btn" title="card info" routerLink="/home/add-money/card-details/{{item.payment_cards_id}}" routerLinkActive='active'  (click)="$event.stopPropagation()">
+            <i class="fa fa-info-circle"></i>
+          </div>
+          <div class="crd_num_title">
+            Card number
+          </div>
+          <div class="crd_num">
+            <p>{{creditCardMask(item.card_number)}}</p>
+            Expresso Bank LTD 
+          </div>
+          <div class="bnk_nme">
+          </div>
+         
+            <!-- <img src="../../../../assets/images/cards/mastercard.png" /> -->
+            <!-- <i class="card_type_cnt card_unionpay"></i> -->
+            <i *ngIf="item.card_type=='VISA' || item.card_type=='visa'" class="card_type_cnt card_visa"></i>
+            <i *ngIf="item.card_type=='mastercard' || item.card_type=='MASTERCARD'" class="card_type_cnt card_master"></i>
+            <i *ngIf="item.card_type=='jcb' || item.card_type=='JCB'" class="card_type_cnt card_jcb"></i>
+            <i *ngIf="item.card_type=='diners-club' || item.card_type=='DINERS-CLUB'" class="card_type_cnt card_dci"></i>
+            <i *ngIf="item.card_type=='unionpay' || item.card_type=='UNIONPAY'" class="card_type_cnt card_unionpay"></i> 
+      
+        </div>
+      </ng-container>
+      </div>
+      <div class="card add_money_card" *ngIf="authService.accountMatch(['Business'])">
+          <h3 class="card_header">How would you like to add money?</h3>
+          <div class="addcard" routerLink="/home/business-add-money/cards">
+            <div class="addcard_icn"><i class="fa fa-plus"></i></div>
+            <span>Add debit or credit card</span>
+          </div>
+          <div class="transfer_Bank">
+            <div class="addcard_icn"><i class="fa fa-bank"></i></div>
+            <span>Transfer to your PayVoo account</span>
+          </div>
+          <ng-container *ngFor="let item of cardData">
+          <div class="crd_card" *ngIf="(item.status == 1)" routerLink="/home/business-add-money/payments/{{item.payment_cards_id}}" routerLinkActive='active'> 
+            <div class="info_btn" title="card info" routerLink="/home/business-add-money/card-details/{{item.payment_cards_id}}" routerLinkActive='active'  (click)="$event.stopPropagation()">
+              <i class="fa fa-info-circle"></i>
+            </div>
+            <div class="crd_num_title">
+              Card number
+            </div>
+            <div class="crd_num">
+              <p>{{creditCardMask(item.card_number)}}</p>
+              Expressor Bank LTD 
+            </div>
+            <div class="bnk_nme">
+            </div>
+           
+              <!-- <img src="../../../../assets/images/cards/mastercard.png" /> -->
+              <!-- <i class="card_type_cnt card_unionpay"></i> -->
+              <i *ngIf="item.card_type=='VISA' || item.card_type=='visa'" class="card_type_cnt card_visa"></i>
+              <i *ngIf="item.card_type=='mastercard' || item.card_type=='MASTERCARD'" class="card_type_cnt card_master"></i>
+              <i *ngIf="item.card_type=='jcb' || item.card_type=='JCB'" class="card_type_cnt card_jcb"></i>
+              <i *ngIf="item.card_type=='diners-club' || item.card_type=='DINERS-CLUB'" class="card_type_cnt card_dci"></i>
+              <i *ngIf="item.card_type=='unionpay' || item.card_type=='UNIONPAY'" class="card_type_cnt card_unionpay"></i> 
+        
+          </div>
+        </ng-container>
+        </div>
+    </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </div>
+</div>
+
+

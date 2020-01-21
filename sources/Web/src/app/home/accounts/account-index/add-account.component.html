@@ -1,0 +1,54 @@
+<div class="container-fluid page_container">
+    <div class="page_header">
+        <div class="header">
+            Accounts
+        </div>
+        <ul>
+            <li>Accounts</li>
+        </ul>
+    </div>
+    <div class="pull-right m-t-10" *ngIf="authService.accountMatch(['Business'])">
+        <button type="button" class="btn btn-primary  m-r-15" routerLink="/home/business-add-money"  routerLinkActive="active"><i
+                class="fa fa-plus"></i>
+           <span class="mob_hid">&nbsp;Add Money</span></button>
+        <button type="button" class="btn btn-primary  m-r-15" routerLink="/home/business-exchange/rates"  routerLinkActive="active"><i
+                class="fa fa-refresh"></i>
+                <span class="mob_hid">&nbsp;Exchange</span></button>
+        <button type="button" class="btn btn-primary "><i class="fa fa-arrow-right"></i>
+            <span class="mob_hid">&nbsp;Send</span></button>
+    </div>
+    <div class="pull-right m-t-10" *ngIf="authService.accountMatch(['Personal'])">
+            <button type="button" class="btn btn-primary  m-r-15" routerLink="/home/add-money"  routerLinkActive="active"><i
+                    class="fa fa-plus"></i>
+               <span class="mob_hid">&nbsp;Add Money</span></button>
+            <button type="button" class="btn btn-primary  m-r-15" routerLink="/home/exchange/rates"  routerLinkActive="active"><i
+                    class="fa fa-refresh"></i>
+                    <span class="mob_hid">&nbsp;Exchange</span></button>
+            <button type="button" class="btn btn-primary "><i class="fa fa-arrow-right"></i>
+                <span class="mob_hid">&nbsp;Send</span></button>
+        </div>
+    <div>
+        <nav class="navbar navbar-expand-sm acc_navbar"  *ngIf="authService.accountMatch(['Business'])">
+            <ul class="navbar-nav">
+                <li routerLink="/home/business-account-index/getaccount" class="nav-item"  routerLinkActive="active">
+                    <a class="nav-link">Accounts</a>
+                </li>
+                <li routerLink="/home/business-account-index/transactions" class="nav-item"  routerLinkActive="active">
+                    <a class="nav-link">Transactions</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-expand-sm acc_navbar"  *ngIf="authService.accountMatch(['Personal'])">
+                <ul class="navbar-nav">
+                    <li routerLink="/home/account-index/getaccount" class="nav-item"  routerLinkActive="active">
+                        <a class="nav-link">Accounts</a>
+                    </li>
+                    <li routerLink="/home/account-index/transactions" class="nav-item"  routerLinkActive="active">
+                        <a class="nav-link">Transactions</a>
+                    </li>
+                </ul>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>

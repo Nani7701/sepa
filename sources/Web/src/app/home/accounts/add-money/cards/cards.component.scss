@@ -1,0 +1,50 @@
+@import "../../../../../styles.scss";
+
+.card {
+  padding: 30px 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.16);
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  display: block;
+  .card_header {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+.add_money_card{
+    min-height: calc(100vh - 200px);
+}
+
+.card_type_cnt {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: 35px;
+  height: 35px;
+  background: url("../../../../../assets/images/icons/iconsprite.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+ }
+ .card_master{
+  background-position: -266px 0px;;
+ }
+ .card_visa{
+  background-position: -137px 0px;;
+ }
+ .card_jcb{
+  background-position: -95px 0px;;
+ }
+ .card_dci{
+  background-position: -177px 0px;;
+ }
+ .card_unionpay{
+  background-position: -219px 0px;;
+ }
+ 
+ @media(max-width:576px){
+  .add_money_card {
+   margin-top: 10px;
+  }
+}

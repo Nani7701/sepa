@@ -1,0 +1,136 @@
+<div class="container-fluid">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 card1-height">
+           <div class="content">
+              <div class="form-group float_label">
+                 <select formControlName="selectedOption" class="form-control" (change)="changeAcc($event)">
+                 <option *ngFor="let acc of accountData">{{ acc.currency }}</option>
+                 </select>
+                 <label>From</label>
+                 <p *ngIf="!bankCurrency">Balance:<span >{{ euroCurrency }}  {{ euroBalance }}</span></p>
+                 <p *ngIf="bankCurrency">Balance:<span > {{ bankCurrency }}  {{ bankBalance }}</span></p>
+              </div>
+           </div>
+           <div class="content1">
+              <div class="form-group float_label text-center">
+                 <input (keypress)="onlyNumberKey($event)"  formControlName="balance" class="form-control input_element" [placeholder]="bankCurrency ? bankCurrency : 'EUR'" required #balance>
+                 <p class="margin-btmmm"><span *ngIf="fee">{{ fee }}</span><span *ngIf="!fee">No fee</span></p>
+              </div>
+           </div>
+           <div>
+             <div *ngIf="bankCurrency">
+              <p *ngIf="bankBalance < this.profileForm.controls['balance'].value" class="text-danger text-center">Insufficient Balance</p>
+             </div>
+              <div *ngIf="!bankCurrency">
+              <p *ngIf="euroBalance < this.profileForm.controls['balance'].value" class="text-danger text-center">Insufficient Balance</p>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-6 col-sm-12 card2-height" *ngIf="true" >
+           <div class="eclipse">
+              <img src="../../../assets/images/eclipse.png">
+              <img src="../../../assets/images/right-arrow-center.png" class="right_arrow">
+           </div>
+           <div class="px-4">
+              <div class="form-group float_label">
+                 <select formControlName="selectBen" class="form-control" (change)="changeBen($event)">
+                    <option *ngFor="let currency of currencyList">
+                       {{currency.currency}}            
+                    </option>
+                 </select>
+              </div>
+           </div>
+           <div class="content2">
+              <div class="input_element1">
+                 <span class="itm_crcl1">J</span>
+                 <br>
+                 <br>
+                 <span style="color: #42424c;">{{counterPartyMember.full_name}}</span>
+                 <p *ngIf="benCurrency" style="font-size: 12px;">{{ benCurrency }}</p>
+                 <p *ngIf="!benCurrency" style="font-size: 12px;">{{ euroDefCurrency }}</p>
+                 <p style="font-size: 20px;"> <span style="color:#2A3477;font-weight: 600;">Pay</span><span
+                    style="color: #F37221;font-weight: 600;"> Voo</span></p>
+              </div>
+           </div>
+        </div>
+        <div class="col-12 text-center">
+            <div *ngIf="bankCurrency">
+               <button class="btn btn-primary continue_btn" [disabled]="profileForm.invalid || (bankBalance < this.profileForm.controls['balance'].value)" (click)="paymentDetailsModal(template)">Continue</button>
+            </div>
+            <div *ngIf="!bankCurrency">
+               <button class="btn btn-primary continue_btn" [disabled]="profileForm.invalid || (euroBalance < this.profileForm.controls['balance'].value)" (click)="paymentDetailsModal(template)">Continue</button>
+            </div>
+        </div>
+     </div>
+      </form>
+   </div>
+  
+   <ng-template #template>
+      <div class="modal-body">
+         <div class="alin">
+            <div class='fnt_color'>
+               <p><span *ngIf="bankCurrency">{{ bankCurrency }}</span><span *ngIf="!bankCurrency">{{ euroCurrency }}</span> - {{ balance.value }}</p>
+               <span>To {{counterPartyMember.full_name}} - 
+               <span *ngIf="benCurrency">{{ benCurrency }}</span>
+               <span *ngIf="!benCurrency">{{ euroDefCurrency }}</span>
+               </span>
+            </div>
+            <form [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+            <div class="float_label">
+               <input class="form-control d-inline" formControlName="reference" placeholder="Reason for Payment or reference(Optional)">
+            </div>
+            <p class="inpt_color"><span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+               &nbsp;&nbsp;&nbsp;Schedule
+            </p>
+                 <div class="form-group float_label text-center">
+                    <input class="form-control input_element" formControlName="dateYMD" placeholder="YYYY-MM-DD">
+                    </div>           
+            <p>You can schedule this payment and add funds later</p>
+            <div class="form-check form-check-inline">
+               <input type="checkbox" class="form-check-input" formControlName="notify">
+               <label class="form-check-label inpt_color">Notify recipient</label>
+            </div>
+           </form>
+         </div>
+         <div style="padding: 30px; background-color: #fafafa; margin-left:-15px; margin-right:-15px">
+            <p class="prsn"> From <span *ngIf="!bankCurrency">{{ euroCurrency }}</span>
+                                   <span *ngIf="bankCurrency">{{ bankCurrency }}</span> 
+               <span class="pull-right bal">Balance : 
+               <span *ngIf="!bankCurrency">{{ euroCurrency }} - {{ euroBalance }}</span>
+               <span *ngIf="bankCurrency">{{ bankCurrency }} - {{ bankBalance }}</span>
+               </span>
+            </p>
+            <p class="prsn">To {{counterPartyMember.full_name}}</p>
+            <p>Account<span class="pull-right"><span *ngIf="bankCurrency">{{bankCurrency}}</span><span *ngIf="!bankCurrency">{{euroCurrency}}</span></span></p>
+            <p>Amount<span class="pull-right"><span *ngIf="bankCurrency">{{bankCurrency}}</span><span *ngIf="!bankCurrency">{{euroCurrency}}</span>&nbsp;{{ balance.value }}</span></p>
+            <p>Transfer fee<span class="pull-right">No fee</span></p>
+            <p>Total<span class="pull-right"><span *ngIf="bankCurrency">{{bankCurrency}}</span><span *ngIf="!bankCurrency">{{euroCurrency}}</span>&nbsp;{{balance.value }}</span></p>
+         </div>
+         <div class="row">
+            <div class="col-6 "><button (click)="modalRef.hide()" class="btn btn-outline-primary btn-block"
+               data-dismiss="modal">Cancel</button></div>
+            <div class="col-6 "><button (click)="singleTransfer(amount)" class="btn btn-primary btn-block">Send
+               funds</button>
+            </div>
+         </div>
+      </div>
+   </ng-template>
+  
+   <ng-template #amount>
+      <div class="modal-content">
+         <div class="modal-body modal_size moda-to">
+            <div class="check_div">
+               <img src="../../../../assets/images/tick_icon.png">
+            </div>
+            <h4 class="header_bar">Successfully sent</h4>
+            <div class="header_para"><span *ngIf="bankCurrency">{{bankCurrency}}</span><span *ngIf="!bankCurrency">{{euroCurrency}}</span>&nbsp;{{balance.value}} to {{counterPartyMember.full_name}} - 
+              <span *ngIf="benCurrency">{{benCurrency}}</span>
+              <span *ngIf="!benCurrency">{{euroDefCurrency}}</span>
+            </div>
+            <div style="text-align: center;">
+               <button class="btn btn-primary btn-block" (click)="continue()">Continue</button>
+            </div>
+         </div>
+      </div>
+   </ng-template>

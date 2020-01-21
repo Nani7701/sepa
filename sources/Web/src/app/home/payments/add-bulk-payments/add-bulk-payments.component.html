@@ -1,0 +1,61 @@
+<div class="card page_ht_crd">
+
+    <div class="acc_navbar">
+        <ul class="nav nav-pills" role="tablist">         
+            <li *ngIf="accountType == 'Business'" class="nav-item">
+                <a data-target="#bulk" data-toggle="tab" class="nav-link active">Bulk payment</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade" id="single">
+            <app-singlepayments></app-singlepayments>
+        </div>
+        <div class="tab-pane fade show active" id="bulk">           
+            <div class="abovetable px-3">
+                <span>{{CounterPartyList?.length}} Payments</span><span class="pull-right">Total: {{totalbal}}</span>
+            </div>
+            <table class="bulk_list_view table-responsive px-3">
+
+                <tr class="text-center">
+                    <td></td>
+                    <td><span>Name and account</span></td>
+                    <td><span>Reference</span></td>
+                    <td><span> Amount</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="item{{i}}" *ngFor="let counterParty of CounterPartyList | filter:searchText; let i = index;">
+                    <td style="width:5%"><span class="itm_crcl">{{getShortName(counterParty.full_name)}}</span></td>
+                    <td style="width:35%">
+                        <span class="lists">{{counterParty.full_name}}</span>
+                        <p class="para1">{{counterParty.currency}} - {{counterParty.account_no}}</p>
+                    </td>
+                    <td style="width:30%">
+
+                        <div class="form-group float_label reference_table_data ">
+                            <input class="form-control" autocomplete="off" [(ngModel)]="counterParty.referenceText" name="id{{i}}"
+                                id="id{{i}}" placeholder="reference">
+                        </div>
+                    </td>
+                    <td style="width:20%">
+                        <div class="form-group float_label amount_table_data ">
+                            <input (keyup)="totalBalance($event)" autocomplete="off" [(ngModel)]="counterParty.balance" name="bal{{i}}"
+                                id="bal{{i}}" (keypress)="onlyNumberKey($event)" class="form-control" placeholder="">
+                        </div>
+
+                    </td>
+                    <td style="width:5%"><img (click)="copyObject(counterParty)"
+                            src="../../../../assets/images/copy-content.png" style="padding-right: 10px;">
+                    </td>
+                    <td style="width:5%"> <img (click)="removeObject(counterParty)"
+                            src="../../../../assets/images/Group 743.png"></td>
+                </tr>
+            </table>
+            <div>
+                <button [disabled]='!check_bal' (click)="continue($event)" class="btn btn-primary col-4 offset-4">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>

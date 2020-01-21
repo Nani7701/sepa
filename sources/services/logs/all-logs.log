@@ -1,0 +1,469 @@
+2019-10-12 19:34:05 [31merror[39m: File Location :  controller.login.loginController -- Line Number :  91 -- Description :  status code : 404 -- description : Failure While creating token
+2019-10-16 15:22:56 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-16 15:33:29 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-16 15:33:55 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:27:31 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:27:32 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:30:19 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:30:19 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:31:22 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:31:22 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:31:45 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:31:45 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:32:03 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:32:03 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:32:48 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:32:48 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:36:03 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:36:03 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:36:59 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:36:59 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:40:25 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:40:25 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:40:27 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:40:27 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:42:45 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:42:45 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:43:41 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:43:41 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:44:39 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:44:39 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:44:41 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:44:41 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-21 12:45:02 [31merror[39m: File Location :  model.country -- Line Number :  undefined -- Description :  Fail to fetch country list at country model
+2019-10-21 12:45:02 [31merror[39m: File Location :  controller.country -- Line Number :  undefined -- Description :  Error while fetching countries list 
+2019-10-24 21:57:37 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 21:57:37 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 21:57:37 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 21:57:37 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 21:57:37 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 21:57:57 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 21:57:57 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 21:57:57 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 21:57:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 21:57:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 21:57:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 21:57:59 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 21:57:59 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 21:57:59 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 21:57:59 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 21:57:59 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  269 -- Description :  Return kyc fail response
+2019-10-24 21:59:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 21:59:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 21:59:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 21:59:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 21:59:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 21:59:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 21:59:19 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 21:59:19 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 21:59:19 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 21:59:19 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 21:59:19 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  269 -- Description :  Return kyc fail response
+2019-10-24 21:59:21 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 21:59:21 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 21:59:21 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 21:59:21 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 21:59:21 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 21:59:21 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 21:59:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 21:59:22 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 21:59:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 21:59:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 21:59:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  269 -- Description :  Return kyc fail response
+2019-10-24 22:00:25 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:00:26 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:00:26 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:00:26 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:00:26 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:00:26 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:00:28 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:00:28 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:00:28 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:00:28 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:00:28 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  269 -- Description :  Return kyc fail response
+2019-10-24 22:01:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:01:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:01:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:01:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:01:58 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 22:09:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:09:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:09:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:09:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:09:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 22:10:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:10:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:10:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:10:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:10:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 22:10:03 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:10:03 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:10:03 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:10:03 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:10:03 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 22:10:49 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:10:49 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:10:49 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:10:49 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:10:49 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:10:49 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:10:51 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:10:51 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:10:51 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:10:51 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:10:51 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:11:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:11:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:11:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:11:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:11:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:11:02 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:11:04 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:11:04 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:11:04 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:11:04 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:11:04 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:11:45 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:11:45 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:11:45 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:11:45 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:11:45 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:11:45 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:11:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:11:47 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:11:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:11:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:11:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:12:16 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:12:16 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:12:16 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:12:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:12:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:12:17 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:12:18 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:12:18 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:12:18 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:12:18 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:12:18 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:12:20 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:12:20 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:12:20 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:12:20 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:12:20 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:12:20 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:12:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:12:22 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:12:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:12:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:12:22 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:12:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:12:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:12:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:12:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:12:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:12:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:12:55 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:12:55 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:12:55 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:12:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:12:56 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:15:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:15:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:15:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:15:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:15:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 22:16:42 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:16:42 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:16:42 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:16:42 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:16:42 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:16:42 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:16:43 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:16:44 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:16:44 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:16:44 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:16:44 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:21:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:21:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:21:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:21:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:21:47 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  157 -- Description :  kyc status return
+2019-10-24 22:22:33 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:22:33 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:22:33 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:22:33 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:22:33 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:22:33 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:22:35 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:22:35 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:22:35 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:22:35 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:22:35 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-10-24 22:23:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  54 -- Description :  initialize kycCurrentStatus()
+2019-10-24 22:23:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  63 -- Description :  Procced for _fetchUserDetails()
+2019-10-24 22:23:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  109 -- Description :  initiated _fetchUserDetails()
+2019-10-24 22:23:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  112 -- Description :  successfully fetched getKycByApplicant()
+2019-10-24 22:23:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  118 -- Description :  proceed for kyc if transation no exist
+2019-10-24 22:23:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  183 -- Description :  Request initiated for kyc trigger for access museService
+2019-10-24 22:23:09 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  195 -- Description :  Request success for kyc trigger for access museService
+2019-10-24 22:23:09 [31merror[39m: File Location :  controller.kycStatus -- Line Number :  undefined -- Description :  Request fail for kyc trigger for access museService
+2019-10-24 22:23:10 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  254 -- Description :  Capturing kyc error response
+2019-10-24 22:23:10 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  263 -- Description :  Return kyc fail response
+2019-10-24 22:23:10 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  267 -- Description :  Return kyc fail response
+2019-11-01 01:02:11 [32minfo[39m: File Location :  controller.login -- Line Number :  26 -- Description :  loginUser  initiated
+2019-11-01 01:02:11 [32minfo[39m: File Location :  model.login -- Line Number :  48 -- Description :  loginUser initiated at userModel
+2019-11-01 01:02:11 [32minfo[39m: File Location :  model.login -- Line Number :  51 -- Description :  Fetched Login response at userModel
+2019-11-01 01:02:11 [32minfo[39m: File Location :  controller.login -- Line Number :  196 -- Description :  createResponse() initiated
+2019-11-01 01:02:11 [32minfo[39m: File Location :  model.login -- Line Number :  78 -- Description :  Initiated responseCreation for login at userModel
+2019-11-01 01:02:11 [32minfo[39m: File Location :  model.login -- Line Number :  84 -- Description :  Login response captured successsfully at userModel
+2019-11-01 01:02:11 [32minfo[39m: File Location :  controller.login -- Line Number :  199 -- Description :  successfully get the results
+2019-11-01 01:02:11 [32minfo[39m: File Location :  controller.login -- Line Number :  213 -- Description :  check the accountType
+2019-11-01 01:02:11 [32minfo[39m: File Location :  controller.login -- Line Number :  231 -- Description :  User type : business
+2019-11-01 01:02:11 [32minfo[39m: File Location :  controller.login -- Line Number :  232 -- Description :  business user response wrapper
+2019-11-01 01:02:12 [32minfo[39m: File Location :  model.login -- Line Number :  97 -- Description :  Initiated getBusinessId for login at userModel
+2019-11-01 01:02:12 [32minfo[39m: File Location :  model.login -- Line Number :  100 -- Description :  Captured business id details successsfully for login at userModel
+2019-11-01 01:02:12 [32minfo[39m: File Location :  controller.login -- Line Number :  78 -- Description :  check the accountType
+2019-11-01 01:02:12 [32minfo[39m: File Location :  model.login -- Line Number :  63 -- Description :  checkInitialPayment initiated at userModel
+2019-11-01 01:02:12 [32minfo[39m: File Location :  model.login -- Line Number :  66 -- Description :  Fetched checkInitialPayment info at userModel
+2019-11-01 01:02:12 [32minfo[39m: File Location :  controller.login -- Line Number :  82 -- Description :  Initial payments TRUE
+2019-11-01 01:02:51 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  27 -- Description :  getCurrencyExchange() intiated
+2019-11-01 01:02:51 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  31 -- Description :  check the status
+2019-11-01 01:02:51 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  33 -- Description :  status is 1
+2019-11-01 01:02:51 [32minfo[39m: File Location :  model.currencyExchangeModel -- Line Number :  116 -- Description :  getAccountNumber() initiated
+2019-11-01 01:02:51 [32minfo[39m: File Location :  model.currencyExchangeModel -- Line Number :  120 -- Description :  execution completed
+2019-11-01 01:02:51 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  35 -- Description :  getAccountNumber() initiated
+2019-11-01 01:02:51 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  41 -- Description :  get the empty results
+2019-11-01 01:03:21 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  27 -- Description :  getCurrencyExchange() intiated
+2019-11-01 01:03:21 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  31 -- Description :  check the status
+2019-11-01 01:03:21 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  50 -- Description :  status is 0
+2019-11-01 01:03:21 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  70 -- Description :  insertCurrencyExchangeData() initiated
+2019-11-01 01:03:21 [32minfo[39m: File Location :  model.currencyExchangeModel -- Line Number :  28 -- Description :  currencyExchangeInfo() intiated
+2019-11-01 01:03:21 [32minfo[39m: File Location :  model.currencyExchangeModel -- Line Number :  32 -- Description :  execution completed
+2019-11-01 01:03:21 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  72 -- Description :  currencyNotify.currencyExchangeInfo() intiated
+2019-11-01 01:03:21 [32minfo[39m: File Location :  model.currencyExchangeModel -- Line Number :  42 -- Description :  updateCurrencyExchangeInfo() intiated
+2019-11-01 01:03:21 [32minfo[39m: File Location :  model.currencyExchangeModel -- Line Number :  46 -- Description :  execution completed
+2019-11-01 01:03:21 [32minfo[39m: File Location :  controller.currencyExchange -- Line Number :  75 -- Description :  currencyNotify.updateCurrencyExchangeInfo() intiated
+2019-11-04 16:14:40 [32minfo[39m: File Location :  controller.password -- Line Number :  64 -- Description :  forgotPassword() intiated
+2019-11-04 16:14:40 [32minfo[39m: File Location :  model.password -- Line Number :  25 -- Description :  forgotPassword() intiated
+2019-11-04 16:14:40 [32minfo[39m: File Location :  model.password -- Line Number :  29 -- Description :  forgotPassword() executed
+2019-11-04 16:14:40 [32minfo[39m: File Location :  controller.password -- Line Number :  70 -- Description :   response of user.forgotPassword()
+2019-11-04 16:14:40 [33mwarn[39m: File Location :  controller.password -- Line Number :  72 -- Description :  userInfo.length must be equal to zero
+2019-11-15 15:42:30 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  33 -- Description :  initialize createIdentity()
+2019-11-15 15:42:30 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  35 -- Description :  Proceed for _fetchUserKycDetails()
+2019-11-15 15:42:30 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  50 -- Description :  Initiated _fetchUserKycDetails()
+2019-11-15 15:42:30 [32minfo[39m: File Location :  model.kyc -- Line Number :  84 -- Description :  Initialize  getUserByApplicant()
+2019-11-15 15:42:30 [32minfo[39m: File Location :  model.kyc -- Line Number :  95 -- Description :  User details by applicantId retrived
+2019-11-15 15:42:30 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  114 -- Description :  Successfully fetched getUserByApplicant()
+2019-11-15 15:42:30 [32minfo[39m: File Location :  model.kyc -- Line Number :  120 -- Description :  Initiated checkUser()
+2019-11-15 15:42:30 [32minfo[39m: File Location :  model.kyc -- Line Number :  125 -- Description :  User details by applicantId retrived
+2019-11-15 15:42:30 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  235 -- Description :  Identity museService request initiated
+2019-11-15 15:42:35 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  245 -- Description :  Identity museService success
+2019-11-15 15:42:35 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  174 -- Description :  Proceed for identity creation
+2019-11-15 15:42:35 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  176 -- Description :  Identity response captured and Initiate Request
+2019-11-15 15:42:35 [34mdebug[39m: File Location :  controller.kycIdentity -- Line Number :  178 -- Description :  Send initiate Request as email
+2019-11-15 15:42:35 [32minfo[39m: File Location :  model.kyc -- Line Number :  135 -- Description :  Initiated updateKyc()
+2019-11-15 15:42:35 [32minfo[39m: File Location :  model.kyc -- Line Number :  140 -- Description :  Updating kyc successfully
+2019-11-15 15:42:35 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  184 -- Description :  Identity response captured
+2019-11-15 15:43:10 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  33 -- Description :  initialize createIdentity()
+2019-11-15 15:43:10 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  35 -- Description :  Proceed for _fetchUserKycDetails()
+2019-11-15 15:43:10 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  50 -- Description :  Initiated _fetchUserKycDetails()
+2019-11-15 15:43:10 [32minfo[39m: File Location :  model.kyc -- Line Number :  84 -- Description :  Initialize  getUserByApplicant()
+2019-11-15 15:43:10 [32minfo[39m: File Location :  model.kyc -- Line Number :  95 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:10 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  114 -- Description :  Successfully fetched getUserByApplicant()
+2019-11-15 15:43:10 [32minfo[39m: File Location :  model.kyc -- Line Number :  120 -- Description :  Initiated checkUser()
+2019-11-15 15:43:10 [32minfo[39m: File Location :  model.kyc -- Line Number :  125 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:10 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  118 -- Description :  User Identified and return existing Identity Info
+2019-11-15 15:43:11 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  33 -- Description :  initialize createIdentity()
+2019-11-15 15:43:11 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  35 -- Description :  Proceed for _fetchUserKycDetails()
+2019-11-15 15:43:11 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  50 -- Description :  Initiated _fetchUserKycDetails()
+2019-11-15 15:43:11 [32minfo[39m: File Location :  model.kyc -- Line Number :  84 -- Description :  Initialize  getUserByApplicant()
+2019-11-15 15:43:11 [32minfo[39m: File Location :  model.kyc -- Line Number :  95 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:11 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  114 -- Description :  Successfully fetched getUserByApplicant()
+2019-11-15 15:43:11 [32minfo[39m: File Location :  model.kyc -- Line Number :  120 -- Description :  Initiated checkUser()
+2019-11-15 15:43:11 [32minfo[39m: File Location :  model.kyc -- Line Number :  125 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:11 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  118 -- Description :  User Identified and return existing Identity Info
+2019-11-15 15:43:13 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  33 -- Description :  initialize createIdentity()
+2019-11-15 15:43:13 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  35 -- Description :  Proceed for _fetchUserKycDetails()
+2019-11-15 15:43:13 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  50 -- Description :  Initiated _fetchUserKycDetails()
+2019-11-15 15:43:13 [32minfo[39m: File Location :  model.kyc -- Line Number :  84 -- Description :  Initialize  getUserByApplicant()
+2019-11-15 15:43:13 [32minfo[39m: File Location :  model.kyc -- Line Number :  95 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:13 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  114 -- Description :  Successfully fetched getUserByApplicant()
+2019-11-15 15:43:13 [32minfo[39m: File Location :  model.kyc -- Line Number :  120 -- Description :  Initiated checkUser()
+2019-11-15 15:43:13 [32minfo[39m: File Location :  model.kyc -- Line Number :  125 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:13 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  118 -- Description :  User Identified and return existing Identity Info
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  26 -- Description :  loginUser  initiated
+2019-11-15 15:43:17 [32minfo[39m: File Location :  model.login -- Line Number :  48 -- Description :  loginUser initiated at userModel
+2019-11-15 15:43:17 [32minfo[39m: File Location :  model.login -- Line Number :  51 -- Description :  Fetched Login response at userModel
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  196 -- Description :  createResponse() initiated
+2019-11-15 15:43:17 [32minfo[39m: File Location :  model.login -- Line Number :  78 -- Description :  Initiated responseCreation for login at userModel
+2019-11-15 15:43:17 [32minfo[39m: File Location :  model.login -- Line Number :  84 -- Description :  Login response captured successsfully at userModel
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  199 -- Description :  successfully get the results
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  213 -- Description :  check the accountType
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  215 -- Description :  User type : personal
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  216 -- Description :  personal user response wrapper
+2019-11-15 15:43:17 [34mdebug[39m: File Location :  controller.login -- Line Number :  227 -- Description :  personal login success
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  78 -- Description :  check the accountType
+2019-11-15 15:43:17 [32minfo[39m: File Location :  model.login -- Line Number :  63 -- Description :  checkInitialPayment initiated at userModel
+2019-11-15 15:43:17 [32minfo[39m: File Location :  model.login -- Line Number :  66 -- Description :  Fetched checkInitialPayment info at userModel
+2019-11-15 15:43:17 [32minfo[39m: File Location :  controller.login -- Line Number :  82 -- Description :  Initial payments TRUE
+2019-11-15 15:43:28 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  33 -- Description :  initialize createIdentity()
+2019-11-15 15:43:28 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  35 -- Description :  Proceed for _fetchUserKycDetails()
+2019-11-15 15:43:28 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  50 -- Description :  Initiated _fetchUserKycDetails()
+2019-11-15 15:43:28 [32minfo[39m: File Location :  model.kyc -- Line Number :  84 -- Description :  Initialize  getUserByApplicant()
+2019-11-15 15:43:28 [32minfo[39m: File Location :  model.kyc -- Line Number :  95 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:28 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  114 -- Description :  Successfully fetched getUserByApplicant()
+2019-11-15 15:43:29 [32minfo[39m: File Location :  model.kyc -- Line Number :  120 -- Description :  Initiated checkUser()
+2019-11-15 15:43:29 [32minfo[39m: File Location :  model.kyc -- Line Number :  125 -- Description :  User details by applicantId retrived
+2019-11-15 15:43:29 [32minfo[39m: File Location :  controller.kycIdentity -- Line Number :  118 -- Description :  User Identified and return existing Identity Info
+2019-11-15 19:46:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  92 -- Description :  initialize updateKycStatus()
+2019-11-15 19:46:53 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  94 -- Description :  Procced for updateKycStatus()
+2019-11-15 19:46:53 [32minfo[39m: File Location :  model.kyc -- Line Number :  150 -- Description :  Initiated updateKycStatus()
+2019-11-15 19:46:54 [32minfo[39m: File Location :  model.kyc -- Line Number :  154 -- Description :  Updating kyc status successfully
+2019-11-15 19:46:54 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  116 -- Description :  kyc status updated
+2019-11-15 19:49:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  92 -- Description :  initialize updateKycStatus()
+2019-11-15 19:49:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  94 -- Description :  Procced for updateKycStatus()
+2019-11-15 19:49:08 [32minfo[39m: File Location :  model.kyc -- Line Number :  150 -- Description :  Initiated updateKycStatus()
+2019-11-15 19:49:08 [32minfo[39m: File Location :  model.kyc -- Line Number :  154 -- Description :  Updating kyc status successfully
+2019-11-15 19:49:08 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  117 -- Description :  kyc status updated
+2019-11-15 19:50:31 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  92 -- Description :  initialize updateKycStatus()
+2019-11-15 19:50:31 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  94 -- Description :  Procced for updateKycStatus()
+2019-11-15 19:50:31 [32minfo[39m: File Location :  model.kyc -- Line Number :  150 -- Description :  Initiated updateKycStatus()
+2019-11-15 19:50:31 [32minfo[39m: File Location :  model.kyc -- Line Number :  154 -- Description :  Updating kyc status successfully
+2019-11-15 19:50:31 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  117 -- Description :  kyc status updated
+2019-11-15 21:17:07 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  226 -- Description :  initialize  getStakeholdersInfo funxtion
+2019-11-15 21:17:07 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  229 -- Description :  create request and call registerBusinessOwner.getBusinessId function 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  259 -- Description :  initialize  getBusinessId() 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  262 -- Description :  success in  getBusinessId() 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  231 -- Description :  get response from registerBusinessOwner.getBusinessId  
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  64 -- Description :  initialize  getStakeholdersInfo() 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  67 -- Description :  success in  getStakeholdersInfo() 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  79 -- Description :  initialize  getStakeholdersContactInfo() 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  82 -- Description :  success in  getStakeholdersContactInfo() 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  236 -- Description :  get response from registerBusinessOwner.getStakeholdersInfo and call _createIndexResponse 
+2019-11-15 21:17:07 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  107 -- Description :  initialize  getAddressDetails() 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  110 -- Description :  success in  getAddressDetails() 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  93 -- Description :  initialize  getKycDetails() 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  96 -- Description :  success in  getKycDetails() 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  141 -- Description :  insert is Kyc flag  
+2019-11-15 21:17:08 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  160 -- Description :  check size of shareHolder 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  170 -- Description :  check size of BUSINESSOWNER 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  204 -- Description :  create a response for director, shareholder and businessowner 
+2019-11-15 21:17:08 [33mwarn[39m: File Location :  controller.businessOwner -- Line Number :  207 -- Description :  create a response in record not found 
+2019-11-15 21:17:08 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  244 -- Description :  get response from _createIndexResponse and send to user 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  226 -- Description :  initialize  getStakeholdersInfo funxtion
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  229 -- Description :  create request and call registerBusinessOwner.getBusinessId function 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  259 -- Description :  initialize  getBusinessId() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  262 -- Description :  success in  getBusinessId() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  231 -- Description :  get response from registerBusinessOwner.getBusinessId  
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  64 -- Description :  initialize  getStakeholdersInfo() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  67 -- Description :  success in  getStakeholdersInfo() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  79 -- Description :  initialize  getStakeholdersContactInfo() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  82 -- Description :  success in  getStakeholdersContactInfo() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  236 -- Description :  get response from registerBusinessOwner.getStakeholdersInfo and call _createIndexResponse 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  107 -- Description :  initialize  getAddressDetails() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  110 -- Description :  success in  getAddressDetails() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  93 -- Description :  initialize  getKycDetails() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  model.businessOwner -- Line Number :  96 -- Description :  success in  getKycDetails() 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  141 -- Description :  insert is Kyc flag  
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  160 -- Description :  check size of shareHolder 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  162 -- Description :  inside block of SHAREHOLDER > 0 
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  164 -- Description :  check percentage of shareholder
+2019-11-15 21:20:12 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  170 -- Description :  check size of BUSINESSOWNER 
+2019-11-15 21:20:13 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  204 -- Description :  create a response for director, shareholder and businessowner 
+2019-11-15 21:20:13 [33mwarn[39m: File Location :  controller.businessOwner -- Line Number :  207 -- Description :  create a response in record not found 
+2019-11-15 21:20:13 [32minfo[39m: File Location :  controller.businessOwner -- Line Number :  244 -- Description :  get response from _createIndexResponse and send to user 
+2019-11-18 21:03:27 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  92 -- Description :  initialize updateKycStatus()
+2019-11-18 21:03:27 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  94 -- Description :  Procced for updateKycStatus()
+2019-11-18 21:03:27 [32minfo[39m: File Location :  model.kyc -- Line Number :  150 -- Description :  Initiated updateKycStatus()
+2019-11-18 21:03:28 [32minfo[39m: File Location :  model.kyc -- Line Number :  154 -- Description :  Updating kyc status successfully
+2019-11-18 21:03:28 [32minfo[39m: File Location :  controller.kycStatus -- Line Number :  116 -- Description :  kyc status updated
+2019-12-10 10:33:46 [32minfo[39m: File Location :  model.login1 -- Line Number :  28 -- Description :  authenticate() method initiated
+2019-12-10 10:33:46 [32minfo[39m: File Location :  model.login1 -- Line Number :  35 -- Description :  authenticate() execution completed
+2019-12-10 10:33:49 [32minfo[39m: File Location :  model.login1 -- Line Number :  28 -- Description :  authenticate() method initiated
+2019-12-10 10:33:49 [32minfo[39m: File Location :  model.login1 -- Line Number :  35 -- Description :  authenticate() execution completed
+2019-12-10 10:33:52 [32minfo[39m: File Location :  model.login1 -- Line Number :  28 -- Description :  authenticate() method initiated
+2019-12-10 10:33:52 [32minfo[39m: File Location :  model.login1 -- Line Number :  35 -- Description :  authenticate() execution completed
+2019-12-10 10:33:52 [32minfo[39m: File Location :  model.login1 -- Line Number :  49 -- Description :  getUserData() method initiated
+2019-12-10 10:33:52 [32minfo[39m: File Location :  model.login1 -- Line Number :  55 -- Description :  getUserData() execution completed
+2019-12-10 10:33:52 [32minfo[39m: File Location :  model.login1 -- Line Number :  69 -- Description :  getCompanyDetail() method initiated
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.login1 -- Line Number :  75 -- Description :  getCompanyDetail() execution completed
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.login1 -- Line Number :  89 -- Description :  checkInitialPayment() method initiated
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.login1 -- Line Number :  95 -- Description :  checkInitialPayment() execution completed
+2019-12-10 10:33:53 [32minfo[39m: File Location :  controller.dashboardStatus -- Line Number :  29 -- Description :  getDashboardStatus() initiated
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  91 -- Description :  getBusinessId() Initiated
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  95 -- Description :  getBusinessId() Exited Successfully
+2019-12-10 10:33:53 [32minfo[39m: File Location :  controller.account -- Line Number :  86 -- Description :  getAccounts() initiated
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.account -- Line Number :  68 -- Description :  getAccount() initiated
+2019-12-10 10:33:53 [32minfo[39m: File Location :  model.account -- Line Number :  72 -- Description :  getAccount() execution completed
+2019-12-10 10:33:53 [32minfo[39m: File Location :  controller.account -- Line Number :  95 -- Description :  getAccounts() execution completed
+2019-12-10 10:33:55 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 10:33:55 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 10:33:55 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 10:33:55 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 10:33:55 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 10:33:55 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 10:33:55 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 10:33:55 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 10:33:55 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 10:33:55 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 10:39:23 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 10:39:23 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 10:39:23 [32minfo[39m: File Location :  controller.dashboardStatus -- Line Number :  29 -- Description :  getDashboardStatus() initiated
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  91 -- Description :  getBusinessId() Initiated
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 10:39:23 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  95 -- Description :  getBusinessId() Exited Successfully
+2019-12-10 10:39:23 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 10:39:23 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 10:45:19 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 10:45:19 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 10:45:19 [32minfo[39m: File Location :  controller.dashboardStatus -- Line Number :  29 -- Description :  getDashboardStatus() initiated
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  91 -- Description :  getBusinessId() Initiated
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 10:45:19 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  95 -- Description :  getBusinessId() Exited Successfully
+2019-12-10 10:45:19 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 10:45:19 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 11:49:30 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 11:49:30 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 11:49:30 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 11:49:30 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 11:49:30 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 11:49:30 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 11:49:30 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 11:49:30 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 11:49:30 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 11:49:30 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  28 -- Description :  authenticate() method initiated
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  35 -- Description :  authenticate() execution completed
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  49 -- Description :  getUserData() method initiated
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  55 -- Description :  getUserData() execution completed
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  69 -- Description :  getCompanyDetail() method initiated
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  75 -- Description :  getCompanyDetail() execution completed
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  89 -- Description :  checkInitialPayment() method initiated
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.login1 -- Line Number :  95 -- Description :  checkInitialPayment() execution completed
+2019-12-10 11:58:06 [32minfo[39m: File Location :  controller.dashboardStatus -- Line Number :  29 -- Description :  getDashboardStatus() initiated
+2019-12-10 11:58:06 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  91 -- Description :  getBusinessId() Initiated
+2019-12-10 11:58:07 [32minfo[39m: File Location :  controller.account -- Line Number :  86 -- Description :  getAccounts() initiated
+2019-12-10 11:58:07 [32minfo[39m: File Location :  model.account -- Line Number :  68 -- Description :  getAccount() initiated
+2019-12-10 11:58:07 [32minfo[39m: File Location :  model.dashboardModel -- Line Number :  95 -- Description :  getBusinessId() Exited Successfully
+2019-12-10 11:58:07 [32minfo[39m: File Location :  model.account -- Line Number :  72 -- Description :  getAccount() execution completed
+2019-12-10 11:58:07 [32minfo[39m: File Location :  controller.account -- Line Number :  95 -- Description :  getAccounts() execution completed
+2019-12-10 11:58:08 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 11:58:08 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 11:58:08 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 11:58:08 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 11:58:08 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
+2019-12-10 11:58:08 [32minfo[39m: File Location :  model.country -- Line Number :  21 -- Description :  Country class constructor initiated
+2019-12-10 11:58:08 [32minfo[39m: File Location :  controller.country -- Line Number :  30 -- Description :  getCountriesList initiated
+2019-12-10 11:58:08 [32minfo[39m: File Location :  model.country -- Line Number :  34 -- Description :  Enters country model initiated for fetching countries
+2019-12-10 11:58:08 [32minfo[39m: File Location :  model.country -- Line Number :  37 -- Description :  Fetched successfully country list at country model
+2019-12-10 11:58:08 [32minfo[39m: File Location :  controller.country -- Line Number :  32 -- Description :  getCountriesList fetched successfully
